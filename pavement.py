@@ -20,6 +20,7 @@ elif hostname == '106f18.learningpython.today':
 else:
     master_url = 'http://127.0.0.1:8000'
 
+master_url = 'https://106f18.learningpython.today'
 master_app = 'runestone'
 serving_dir = "./build/fopp"
 dest = "../../static"
