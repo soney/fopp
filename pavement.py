@@ -15,6 +15,8 @@ if hostname in ['runestone-deploy', 'rsbuilder', 'runestone.academy']:
     master_url = 'https://runestone.academy'
 elif hostname == 'fopp.learningpython.today':
     master_url = 'https://fopp.learningpython.today'
+elif hostname == '106f18.learningpython.today':
+    master_url = 'https://106f18.learningpython.today'
 else:
     master_url = 'http://127.0.0.1:8000'
 
