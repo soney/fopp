@@ -82,6 +82,7 @@ Table of Contents
    BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
    AdvancedAccumulation/toctree.rst 
+   Assignments/toctree.rst 
    
 
 Appendices
@@ -93,6 +94,7 @@ Appendices
 
    Appendices/errorsAndDebug.rst
    Appendices/PrecedenceTable.rst
+
 
 Acknowledgements
 ::::::::::::::::
