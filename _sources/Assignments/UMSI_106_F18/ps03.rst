@@ -354,7 +354,7 @@ Problem Set 3
 
         # III.
         L= [1]
-        L += [4, 7]
+        L = L + [4, 7]
 
    ..
 
@@ -428,7 +428,6 @@ Problem Set 3
     class myTests(TestCaseGui):
         def testOne(self):
             self.assertEqual(GSIs, ["Amanda", "Daphne", "Michael", "Iman"], "Testing whether you have all the GSIs listed.")
-            self.assertIn('["Iman"]', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
             self.assertNotIn('.append(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
     myTests().main()
