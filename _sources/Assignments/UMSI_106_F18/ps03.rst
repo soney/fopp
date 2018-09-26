@@ -404,7 +404,7 @@ Problem Set 3
     class myTests(TestCaseGui):
         def testOne(self):
             self.assertEqual(GSIs, ["Amanda", "Daphne", "Michael", "Iman"], "Testing whether you have all the GSIs listed.")
-            self.assertIn('.append(', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+            self.assertIn('append', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
             self.assertNotIn('["Iman"]', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
     myTests().main()

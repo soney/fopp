@@ -152,7 +152,7 @@ Week 4 Discussion Section
     class myTests(TestCaseGui):
         def testOne(self):
             self.assertEqual(L, [1, 2, 3, 4], "Testing that L was set to [1, 2, 3, 4]")
-            self.assertIn([1, 2, 3, 4], self.getOutput(), "Testing that your code correctly printed out [1, 2, 3, 4]")
+            self.assertIn('[1, 2, 3, 4]', self.getOutput(), "Testing that your code correctly printed out [1, 2, 3, 4]")
             self.assertIn("append", self.getEditorText(), "Testing that your code uses .append()")
 
     myTests().main()
