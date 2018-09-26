@@ -1,0 +1,200 @@
+.. _discussion_section_04:
+
+Week 4 Discussion Section
+-------------------------
+
+.. activecode:: ds_04_01
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: Selection/Chainedconditionals
+
+    The code below creates a random number between 1 and 10 and then asks the user to guess the number. Write code that will give the user feedback on their guess:
+
+    - If ``userGuess`` is smaller than ``randNum``, print ``"too low"``
+    - If ``userGuess`` is larger than ``randNum``, print ``"too high"``
+    - If ``userGuess`` is equal to ``randNum``, print ``"correct!"``
+
+    You should use ``if``, ``elif``, and ``else``. Note that this random number will change every time you run the program.
+
+    ~~~~
+    import random # Allows us to use the "random" module
+    randNum = random.randint(1,10) # Creates a random number between 1 and 10
+    userGuess = int(input("Guess the random number: ")) # Ask the user to enter their guess
+    # do not alter the code above
+
+    # if they guesed UNDER,     print "too low"
+    # if they guesed OVER,      print "too high"
+    # if they guesed CORRECTLY, print "correct!"
+
+    # do not alter the code below
+    if userGuess != randNum:
+        print("The correct answer was " + str(randNum))
+    =====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertIn('if', self.getEditorText(), "Testing that you used an if (Don't worry about actual and expected values).")
+            self.assertIn('elif', self.getEditorText(), "Testing that you used an elif (Don't worry about actual and expected values).")
+            self.assertIn('else', self.getEditorText(), "Testing that you used an else (Don't worry about actual and expected values).")
+
+            if(userGuess == randNum): correctFeedback = "correct!"
+            elif(userGuess < randNum): correctFeedback = "too low"
+            else: correctFeedback = "too high"
+
+            self.assertIn(correctFeedback, self.getOutput(), "Testing that your code gave the user the correct feedback.")
+
+    myTests().main()
+
+.. activecode:: ds_04_02
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: Selection/ConditionalExecutionBinarySelection
+
+    Write code that counts the number of a's in ``word`` and store the result in the variable ``a_count``.
+
+    ~~~~
+    word = 'supercalifragilisticexpialidocious'
+    =====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertIn('for', self.getEditorText(), "Testing that you used a for loop (Don't worry about actual and expected values).")
+            self.assertEqual(a_count, 3, "Testing that a_count has been set to the correct value.")
+
+    myTests().main()
+
+.. activecode:: ds_04_03
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: Selection/ConditionalExecutionBinarySelection
+
+    The variable ``sentence`` stores a string. Write code to determine the number of words that contain the letter "c". Store the result in ``num_words_with_c``.
+    ~~~~
+    sentence = "students flock to the arb for a variety of outdoor activities such as jogging and picnicking"
+
+    # Write your code here.
+
+    ====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertIn('for', self.getEditorText(), "Testing that you used a for loop (Don't worry about actual and expected values).")
+            self.assertEqual(num_words_with_c, 4, "Testing that num_words_with_c has been set to the correct value.")
+
+    myTests().main()
+
+
+.. activecode:: ds_04_04
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: Selection/ConditionalExecutionBinarySelection
+
+    The variable ``sentence`` stores a string. Write code to determine the number of words that contain the letter "c" **or** are more than 5 characters long. Store the result in ``c_or_long``.
+    ~~~~
+    sentence = "students flock to the arb for a variety of outdoor activities such as jogging and picnicking"
+
+    # Write your code here.
+
+    ====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(c_or_long, 8, "Testing that c_or_long has been set to the correct value.")
+
+    myTests().main()
+
+.. activecode:: ds_04_05
+    :language: python
+    :autograde: unittest
+    :practice: T
+
+    The variable ``sentence`` stores a string. Write code to determine the **longest** word in ``sentence``. Store your answer in the variable ``longest_word``.
+    ~~~~
+    sentence = "students flock to the arb for a variety of outdoor activities such as jogging"
+
+    # Write your code here.
+
+    ====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(longest_word, "activities", "Testing that longest_word has been set to the correct value.")
+
+    myTests().main()
+
+.. activecode:: ds_04_06
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: Selection/ConditionalExecutionBinarySelection
+
+    The following code is supposed to print out ``[1, 2, 3, 4]`` but it does not. Modify the code so that it properly sets ``L`` to ``[1, 2, 3, 4]`` and prints outs ``[1, 2, 3, 4]``. Note: you should still use ``.append()``.
+    ~~~~
+    L = [1, 2, 3]
+    print(L.append(4))
+
+    ====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(L, [1, 2, 3, 4], "Testing that L was set to [1, 2, 3, 4]")
+            self.assertIn([1, 2, 3, 4], self.getOutput(), "Testing that your code correctly printed out [1, 2, 3, 4]")
+            self.assertIn("append", self.getEditorText(), "Testing that your code uses .append()")
+
+    myTests().main()
+
+.. activecode:: ds_04_07
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: Selection/ConditionalExecutionBinarySelection
+
+    The following code is supposed to add ``'D'`` to the end of the string ``s`` but it currently gives a runtime error. Fix it using string concatenation so that it does what it is supposed to. Do not hard code your answer
+    ~~~~
+    s = 'ABC'
+    s.append('D')
+
+    ====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(s, 'ABCD', "Testing that s was set to 'ABCD'")
+            self.assertIn('+', self.getEditorText(), "Testing that your code uses string concatenation.")
+
+    myTests().main()
+
+.. activecode:: ds_04_08
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: Selection/ConditionalExecutionBinarySelection
+
+    Given the string ``sentence``, create a new string named ``sentence_no_e`` that contains *only words with no e's*. For example, if ``sentence`` were ``"this is my sentence"`` then ``sentence_no_e`` should be ``"this is my"``.
+    ~~~~
+    sentence = "The President’s House of the University of Michigan is the oldest building on the University campus. It is one of the original four houses constructed to house faculty when the University moved from Detroit to Ann Arbor in 1837."
+
+    ====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(sentence_no_e, ' '.join(filter(lambda w: 'e' not in w, sentence.split())), "Testing that sentence_no_e was set correctly'")
+
+    myTests().main()
