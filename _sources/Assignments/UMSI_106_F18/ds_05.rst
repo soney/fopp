@@ -217,6 +217,30 @@ Week 5 Discussion Section
 
    myTests().main()
 
+.. activecode:: ds_05_state_biggest
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: DictionaryAccumulation/intro-AccumulatingMultipleResultsInaDictionary
+
+   We have ``states.txt`` from before. This time, write code to find the state with the **largest** population and store the name of the state (e.g., ``"Michigan"``) in the variable ``largest_pop``. Do not hard code your answer.
+   ~~~~
+   f = open('states.txt', 'r')
+   for line in f.readlines():
+       cells = line.split(',')
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+       def testOne(self):
+           self.assertEqual(largest_pop, "California", "Testing largest_pop")
+           self.assertIn('>', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+
 
 .. datafile:: states.txt
 
