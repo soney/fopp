@@ -1,0 +1,272 @@
+.. _discussion_section_05:
+
+Week 5 Discussion Section
+-------------------------
+
+.. activecode:: ds_05_remap_py
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: Dictionaries/intro-Dictionaries
+
+    Below is a dictionary ``diction`` with two key-value pairs inside it. The string ``"python"`` is one of its keys. Using dictionary mechanics, print out the value of the key ``"python"``.
+
+    ~~~~
+    diction = {"python":"you are awesome","autumn":100}
+
+    # Write your code here.
+
+    ====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertIn('you are awesome', self.getOutput(), "Testing your code (Don't worry about actual and expected values).")
+
+    myTests().main()
+
+
+.. activecode:: ds_05_print_values
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: Dictionaries/Dictionarymethods
+
+    **6.** Here's a dictionary, ``d``.
+
+
+    **PART 1**
+    Write code to print out each key-value pair in it, one key and its value on each line. Your output should look somewhat like this (remember, the order may be different!):
+
+    ::
+
+        autumn spring
+        4 seasons
+        23 345
+        well spring
+
+    **PART 2**
+    Then, write code to increase the value of key ``"23"`` by 5.
+
+    **PART 3**
+    Finally, write code to print the value of the key ``"well"``. Your code should work no matter what the value of the key "well" is.
+
+    **HINTS:**
+    - Printing things with a comma, e.g. ``print("hello", "everyone")`` will print out those things on the same line with  a space in between them: ``hello everyone``.
+    - Your code should work no matter what the values corresponding to the keys are!
+
+    ~~~~
+    d = {"autumn":"spring", "well":"spring", "4":"seasons","23":345}
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(d["23"], 350, "Testing that the value associated with the key '23' is 350")
+            self.assertIn("autumn spring", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+            self.assertIn("well spring", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+            self.assertIn("4 seasons", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+            self.assertIn("23 345", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+
+    myTests().main()
+
+
+.. activecode:: ds_05_create_dict
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: DictionaryAccumulation/intro-AccumulatingMultipleResultsInaDictionary
+
+    Below is an empty dictionary saved in the variable ``nums``, and a list saved in the variable ``num_words``. Use iteration and dictionary mechanics to add each element of ``num_words`` as a key in the dictionary ``nums``. Each key should have the value ``0``. The dictionary should end up looking something like this when you print it out (remember, you can't be sure of the order): ``{"two":0,"three":0,"four":0,"eight":0,"seventeen":0,"not_a_number":0}``
+    ~~~~
+    nums = {}
+    num_words = ["two","three","four","seventeen","eight","not_a_number"]
+    # Write your code here.
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(nums["two"], 0, "Testing that the key 'two' has been assigned the value of 0.")
+            self.assertEqual(type(nums["seventeen"]), type(3), "Testing that the key 'seventeen' has been assigned a value whose type is an integer.")
+            self.assertEqual(sorted(nums), sorted({"two": 0, "three": 0, "four": 0, "eight": 0, "seventeen": 0, "not_a_number": 0}), "Testing that the contents of nums is accurate.")
+
+        def testOneA(self):
+            self.assertIn('for', self.getEditorText(), "Testing that there is a for inside your code (Don't worry about actual and expected values).")
+
+    myTests().main()
+
+
+.. activecode:: ds_05_countries_with_more
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: Iteration/TheAccumulatorPatternwithLists
+
+    **8.** Suppose the dictionary ``golds`` maps countries to the number of gold medals they won in the 2016 olympics. Write code to store the names of countries that won more than 20 gold medals into the variable ``gold20``.
+    ~~~~
+    golds = {"Italy": 12, "USA": 33, "Brazil": 15, "China": 27, "Spain": 19, "Canada": 22, "Argentina": 8, "England": 29}
+
+    =====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(sorted(gold20),sorted(['USA', 'China', 'Canada', 'England']) , "Testing that gold20 has been created correctly.")
+
+    myTests().main()
+
+
+.. activecode:: ds_05_contries_that_won
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: DictionaryAccumulation/AccumulatingaMaximumValue
+
+    Suppose the dictionary ``golds`` maps countries to the number of gold medals they won in the 2016 olympics. Write code to compute the name of the country that won the most gold medals. Store the result in the variable ``most_golds``
+    ~~~~
+    golds = {"Italy": 12, "USA": 33, "Brazil": 15, "China": 27, "Spain": 19, "Canada": 22, "Argentina": 8, "England": 29}
+
+    =====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(most_golds, "USA", "Testing that most_golds has been set correctly.")
+
+    myTests().main()
+
+.. activecode:: ds_05_print_states
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: Sequences/SplitandJoin
+
+   The file ``states.txt`` contains a CSV-formatted string that contains population information for various states. Every state is on a different line. There are four "columns": state name, abbreviation, region, and population. Every column is separated by a comma. Use a ``for`` loop to loop through every line of ``state_data`` and print out each line.
+
+
+   Hint: use ``.readlines()`` to read the lines of ``states.txt`` into a list.
+   ~~~~
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+      def testOne(self):
+         self.assertIn("Michigan,MI,Midwest,9909877", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+
+      def testOneA(self):
+         self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: ds_05_splitting
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: Sequences/SplitandJoin
+
+   Use ``states.txt`` from before, but this time for every state, only print the state abbreviation (for example, **MI** for Michigan). You may use your code from the previous problem. Your output should contain "AL" on one line, "AK" on the next, etc.
+
+   Hint: use ``.split(',')`` to split a given line by commas. You may use ``.strip()`` on any string to remove left and right whitespace (optional).
+   ~~~~
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+      def testOne(self):
+         self.assertIn("MI\n", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+
+      def testOneA(self):
+         self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: ds_05_state_dict
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
+   :topics: DictionaryAccumulation/intro-AccumulatingMultipleResultsInaDictionary
+
+   We have ``states.txt`` from before. This time, create a **dictionary** called ``state_abbreviations`` that maps state abbreviations to their names. For example, ``"MI"`` should be mapped to ``"Michigan"``.
+   ~~~~
+   f = open('states.txt', 'r')
+   state_abbreviations = {}
+   for line in f.readlines():
+       cells = line.split(',')
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+       def testOne(self):
+           self.assertEqual(state_abbreviations['MI'], "Michigan", "Testing MI abbreviation")
+           self.assertEqual(state_abbreviations['PA'], "Pennsylvania", "Testing PA abbreviation")
+           self.assertEqual(state_abbreviations['MA'], "Massachusetts", "Testing MA abbreviation")
+           self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+
+.. datafile:: states.txt
+
+   Alabama,AL,South,4849377
+   Alaska,AK,West,736732
+   Arizona,AZ,West,6731484
+   Arkansas,AR,South,2966369
+   California,CA,West,38802500
+   Colorado,CO,West,5355866
+   Connecticut,CT,Northeast,3596677
+   Delaware,DE,South,935614
+   Florida,FL,South,19893297
+   Georgia,GA,South,10097343
+   Hawaii,HI,West,1419561
+   Idaho,ID,West,1634464
+   Illinois,IL,Midwest,12880580
+   Indiana,IN,Midwest,6596855
+   Iowa,IA,Midwest,3107126
+   Kansas,KS,Midwest,2904021
+   Kentucky,KY,South,4413457
+   Louisiana,LA,South,4649676
+   Maine,ME,Northeast,1330089
+   Maryland,MD,South,5976407
+   Massachusetts,MA,Northeast,6745408
+   Michigan,MI,Midwest,9909877
+   Minnesota,MN,Midwest,5457173
+   Mississippi,MS,South,2994079
+   Missouri,MO,Midwest,6063589
+   Montana,MT,West,1023579
+   Nebraska,NE,Midwest,1881503
+   Nevada,NV,West,2839099
+   New Hampshire,NH,Northeast,1326813
+   New Jersey,NJ,Northeast,8938175
+   New Mexico,NM,West,2085572
+   New York,NY,Northeast,19746227
+   North Carolina,NC,South,9943964
+   North Dakota,ND,Midwest,739482
+   Ohio,OH,Midwest,11594163
+   Oklahoma,OK,South,3878051
+   Oregon,OR,West,3970239
+   Pennsylvania,PA,Northeast,12787209
+   Rhode Island,RI,Northeast,1055173
+   South Carolina,SC,South,4832482
+   South Dakota,SD,Midwest,853175
+   Tennessee,TN,South,6549352
+   Texas,TX,South,26956958
+   Utah,UT,West,2942902
+   Vermont,VT,Northeast,626562
+   Virginia,VA,South,8326289
+   Washington,WA,West,7061530
+   West Virginia,WV,South,1850326
+   Wisconsin,WI,Midwest,5757564
+   Wyoming,WY,West,584153

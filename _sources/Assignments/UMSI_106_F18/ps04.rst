@@ -1,0 +1,302 @@
+.. _problem_set_04:
+
+Problem Set 4
+-------------
+
+**Instructions:** Write the code you want to save in the provided boxes, and click **Save & Run** for each one. That will  *run* your code, so you can see the output, if any, and the result of the tests, if there are any. It will also *save* your code. You should run your code each time you want to save it. You can then load the history of the code you have run and saved. The *last* code you have saved for each problem by the deadline is what will be graded.
+
+.. activecode:: ps_04_newer_schools
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: Iteration/TheAccumulatorPatternwithLists
+
+    The dictionary ``umSchools`` maps the names of schools at Michigan to the year they were founded.
+    Write code to add the name of every school that was founded in the 20th century (after 1900) into a list ``newer_schools``.
+
+    Hard-coded answers will receive no credit.
+    ~~~~
+    umSchools = {
+      "A. Alfred Taubman College of Architecture & Urban Planning": 1906,
+      "College of Engineering": 1854,
+      "College of Literature, Science, and the Arts": 1841,
+      "Gerald R. Ford School of Public Policy": 1914,
+      "Horace H. Rackham School of Graduate Studies": 1912,
+      "Penny W. Stamps School of Art & Design": 1974,
+      "School of Dentistry": 1875,
+      "School of Education": 1921,
+      "School of Information": 1996,
+      "School of Kinesiology": 1984,
+      "School of Law": 1859,
+      "School of Medicine": 1850,
+      "School of Music, Theatre & Dance": 1880,
+      "School of Natural Resources & Environment": 1927,
+      "School of Nursing": 1893,
+      "School of Pharmacy": 1876,
+      "School of Public Health": 1941,
+      "School of Social Work": 1951,
+      "Stephen M. Ross School of Business": 1924
+    }
+    =====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            a = [s for s in umSchools if umSchools[s]>1900]
+            self.assertEqual(sorted(newer_schools), sorted(a), "Testing that newer_schools has been set to the correct value")
+
+    myTests().main()
+
+.. activecode:: ps_04_max_val
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: DictionaryAccumulation/AccumulatingaMaximumValue
+
+    The dictionary ``umSchools`` maps the names of schools at Michigan to the year they were founded.
+    Write code that determines which school is the oldest and store the name of the school into the variable ``oldest_school``.
+    Hard-coded answers will receive no credit.
+    ~~~~
+    umSchools = {
+      "A. Alfred Taubman College of Architecture & Urban Planning": 1906,
+      "College of Engineering": 1854,
+      "College of Literature, Science, and the Arts": 1841,
+      "Gerald R. Ford School of Public Policy": 1914,
+      "Horace H. Rackham School of Graduate Studies": 1912,
+      "Penny W. Stamps School of Art & Design": 1974,
+      "School of Dentistry": 1875,
+      "School of Education": 1921,
+      "School of Information": 1996,
+      "School of Kinesiology": 1984,
+      "School of Law": 1859,
+      "School of Medicine": 1850,
+      "School of Music, Theatre & Dance": 1880,
+      "School of Natural Resources & Environment": 1927,
+      "School of Nursing": 1893,
+      "School of Pharmacy": 1876,
+      "School of Public Health": 1941,
+      "School of Social Work": 1951,
+      "Stephen M. Ross School of Business": 1924
+    }
+    =====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            a = sorted(umSchools, key=lambda x: umSchools[x])[0]
+            self.assertEqual(oldest_school, a, "Testing that oldest_school has been correctly set")
+
+    myTests().main()
+
+.. activecode:: ps_04_reading_files
+    :language: python
+    :autograde: unittest
+    :available_files: message.txt
+
+    Assign the contents of the file ``message.txt`` to the variable ``msg`` (``msg`` should be a string).
+    ~~~~
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOneA(self):
+           self.assertIn('open', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+           self.assertEqual(msg, 'hello!\n', "Testing that msg was assigned to the correct value.")
+
+    myTests().main()
+
+.. activecode:: ps_04_writing_files
+    :language: python
+    :autograde: unittest
+    :available_files: nums.txt
+
+    The file ``nums.txt`` contains a list of numbers (each on a separate line). Write code that reads the contents of ``nums.txt``, computes the **square** of every number, and writes the result to ``squares.txt``
+    ~~~~
+    # your code
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOneA(self):
+            self.assertIn('open', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+            f = open('nums.txt', 'r')
+            nums = list(map(lambda x: int(x), f.readlines()))
+            f.close()
+
+            squares = map(lambda x: x**2, nums)
+
+            sqf = open('squares.txt', 'r')
+            actuals = list(map(lambda x: int(x), sqf.readlines()))
+            sqf.close()
+
+            self.assertEqual(actuals, squares, "Testing that squares.txt has the correct value.")
+
+    myTests().main()
+
+.. activecode:: ps_04_temps_simple
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: DictionaryAccumulation/intro-AccumulatingMultipleResultsInaDictionary
+    :available_files: january_temp_data.txt
+
+    We have a specially formatted file named ``january_temp_data.txt`` that contains January temperature information for Ann Arbor for the years 2016 to 2000. Every year is on a different line. There are three "columns", separated by commas. The first column specifies the year, the second column specifies the lowest temperature (in Fahrenheit), and the third column specifies the highest temperature (see the comment at the top of the code). Write code that will create two dictionaries: ``january_lows`` and ``january_highs`` that map years to low and high temperatures respectively. In both dictionaries, the keys should be **integers** (for each year) and the values should be **integers** for the temperatures. You will get zero credit if you hard-code your answer.
+
+    Hint: Use ``.split(',')`` to split a given line. Use ``int()`` to cast strings to integers.
+    ~~~~
+    # COLUMNS:
+    # 0: year
+    # 1: lowest temperature  (F)
+    # 2: highest temperature (F)
+
+    # Write your code here.
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            lows = {2000: -2, 2001: 1, 2002: 11, 2003: -5, 2004: -6, 2005: -3, 2006: 18, 2007: 5, 2008: 3, 2009: -10, 2010: 3, 2011: 1, 2012: 2, 2013: -3, 2014: -14, 2015: -3, 2016: 6}
+            highs = {2000: 56, 2001: 43, 2002: 55, 2003: 47, 2004: 55, 2005: 56, 2006: 53, 2007: 50, 2008: 62, 2009: 39, 2010: 47, 2011: 52, 2012: 55, 2013: 60, 2014: 43, 2015: 41, 2016: 51}
+            self.assertEqual(sorted(january_lows), sorted(lows), "testing whether lows is set correctly")
+            self.assertEqual(sorted(january_lows.values()), sorted(lows.values()), "testing whether lows is set correctly")
+            self.assertEqual(sorted(january_highs), sorted(highs), "testing whether highs is set correctly")
+            self.assertEqual(sorted(january_highs.values()), sorted(highs.values()), "testing whether highs is set correctly")
+
+        def testOneA(self):
+           self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+    myTests().main()
+
+
+.. activecode:: ps_04_temps_diff
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: DictionaryAccumulation/AccumulatingaMaximumValue
+    :available_files: january_temp_data.txt
+
+    We want to use the file named ``january_temp_data.txt`` as before. This time, write code that will determine which year had the largest *difference* between the lowest and highest temperature. Store the year as an integer in a variable named ``biggest_temp_diff_year``. You will get zero credit if you hard-code your answer.
+    ~~~~
+    # COLUMNS:
+    # 0: year
+    # 1: lowest temperature  (F)
+    # 2: highest temperature (F)
+
+    # Write your code here.
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+           self.assertEqual(biggest_temp_diff_year, 2013, "testing whether biggest_temp_diff_year is set correctly")
+
+        def testOneA(self):
+           self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+    myTests().main()
+
+
+
+.. activecode:: ps_04_temps_max_value
+    :language: python
+    :autograde: unittest
+    :practice: T
+    :topics: DictionaryAccumulation/AccumulatingaMaximumValue
+    :available_files: january_temp_data_complete.txt
+
+    We want to use a similar file named ``january_temp_data_complete.txt`` This time, write code that will determine which year had most **precipitation + snowfall** and store that year as an integer in the variable ``most_water_year``. You will get zero credit if you hard-code your answer. Note: use the ``float()`` function to cast a string to a float.
+    ~~~~
+    # COLUMNS:
+    #  0: year
+    #  1: lowest temperature (F)
+    #  2: highest temperature (F)
+    #  3: warmest minimum temperature (F)
+    #  4: coldest maximum temperature (F)
+    #  5: average minimum temperature (F)
+    #  6: average maximum temperature (F)
+    #  7: mean temperature (F)
+    #  8: total precipitation (in)
+    #  9: total snowfall (in)
+    # 10: max 24hr precipitation
+    # 11: max 24hr snowfall
+
+    # Write your code here.
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+           self.assertEqual(most_water_year, 2014, "testing whether most_water_year is set correctly")
+
+        def testOneA(self):
+           self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+    myTests().main()
+
+
+.. datafile:: message.txt
+
+    hello!
+
+.. datafile:: nums.txt
+
+    2
+    4
+    6
+    8
+    10
+
+
+.. datafile:: january_temp_data.txt
+
+    2016,   6, 51
+    2015,  -3, 41
+    2014, -14, 43
+    2013,  -3, 60
+    2012,   2, 55
+    2011,   1, 52
+    2010,   3, 47
+    2009, -10, 39
+    2008,   3, 62
+    2007,   5, 50
+    2006,  18, 53
+    2005,  -3, 56
+    2004,  -6, 55
+    2003,  -5, 47
+    2002,  11, 55
+    2001,   1, 43
+    2000,  -2, 56
+
+.. datafile:: january_temp_data_complete.txt
+
+    2016,   6, 51, 36, 15, 19.8, 33.6, 26.7, 1.80, 12.20, 0.51,  3.20
+    2015,  -3, 41, 33,  6, 14.6, 28.2, 21.4, 1.81, 15.60, 0.52,  2.90
+    2014, -14, 43, 34,  4,  9.3, 24.7, 17.0, 3.48, 37.80, 0.56,  5.60
+    2013,  -3, 60, 49, 11, 21.1, 36.3, 28.7, 3.81, 15.60, 0.73,  4.50
+    2012,   2, 55, 36, 16, 23.3, 37.1, 30.2, 3.06, 13.90, 0.91,  2.20
+    2011,   1, 52, 49, 16, 16.1, 28.2, 22.1, 2.07, 19.80, 0.41,  4.00
+    2010,   3, 47, 33, 19, 18.9, 30.3, 24.6, 1.10, 10.50, 0.26,  2.80
+    2009, -10, 39, 26,  9, 10.8, 24.9, 17.9, 2.16, 27.00, 0.50,  6.60
+    2008,   3, 62, 51, 14, 21.3, 34.7, 28.0, 4.26, 22.70, 1.20, 11.40
+    2007,   5, 50, 43, 22, 23.3, 35.0, 29.1, 4.31, 10.30, 1.00,  2.00
+    2006,  18, 53, 41, 30, 29.4, 40.5, 34.9, 4.32,  8.40, 0.87,  4.70
+    2005,  -3, 56, 33, 14, 16.0, 31.4, 23.7, 4.46, 29.10, 0.72,  9.30
+    2004,  -6, 55, 41, 13, 11.6, 26.3, 19.0, 2.22, 23.40, 0.45,  4.50
+    2003,  -5, 47, 36, 17, 13.9, 26.5, 20.2, 0.93, 13.80, 0.17,  2.10
+    2002,  11, 55, 38, 27, 25.5, 39.3, 32.4, 3.41, 25.40, 1.57,  7.60
+    2001,   1, 43, 33, 22, 20.3, 32.0, 26.1, 1.32,  6.70, 0.43,  2.20
+    2000,  -2, 56, 37, 14, 16.1, 32.2, 24.1, 1.96, 16.10, 0.33,  4.90
