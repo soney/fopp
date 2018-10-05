@@ -33,7 +33,7 @@ Week 5 Discussion Section
     :practice: T
     :topics: Dictionaries/Dictionarymethods
 
-    **6.** Here's a dictionary, ``d``.
+    Here's a dictionary, ``d``.
 
 
     **PART 1**
@@ -108,7 +108,7 @@ Week 5 Discussion Section
     :practice: T
     :topics: Iteration/TheAccumulatorPatternwithLists
 
-    **8.** Suppose the dictionary ``golds`` maps countries to the number of gold medals they won in the 2016 olympics. Write code to store the names of countries that won more than 20 gold medals into the variable ``gold20``.
+    Suppose the dictionary ``golds`` maps countries to the number of gold medals they won in the 2016 olympics. Write code to store the names of countries that won more than 20 gold medals into the variable ``gold20``.
     ~~~~
     golds = {"Italy": 12, "USA": 33, "Brazil": 15, "China": 27, "Spain": 19, "Canada": 22, "Argentina": 8, "England": 29}
 
@@ -241,6 +241,29 @@ Week 5 Discussion Section
 
    myTests().main()
 
+.. activecode:: ds_05_writing_files
+    :language: python
+    :autograde: unittest
+    :available_files: nums.txt
+
+    Write code that writes the string ``"hello world"`` to a file named ``myfile.txt``.
+    ~~~~
+    # your code
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOneA(self):
+            self.assertIn('open', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+            f = open('myfile.txt', 'r')
+            d = f.read()
+            f.close()
+
+            self.assertEqual(d, "hello world", "Testing that myfile.txt has the correct contents.")
+
+    myTests().main()
 
 .. datafile:: states.txt
 
