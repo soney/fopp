@@ -81,6 +81,8 @@ until later in this course. We don't need them for handling data from files.
  
 
 .. activecode:: ac9_4_1
+   :language: python
+   :autograde: unittest
    :practice: T
    :available_files: school_prompt2.txt
 
@@ -116,6 +118,8 @@ until later in this course. We don't need them for handling data from files.
     </pre>
 
 .. activecode:: ac9_4_2
+   :language: python
+   :autograde: unittest
    :available_files: travel_plans2.txt
    :practice: T
 
@@ -147,6 +151,8 @@ until later in this course. We don't need them for handling data from files.
     </pre>
 
 .. activecode:: ac9_4_3
+   :language: python
+   :autograde: unittest
    :available_files: emotion_words2.txt
    :practice: T
    
