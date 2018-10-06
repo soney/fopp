@@ -108,6 +108,8 @@ to read it. And when you start dealing with big files, you may notice the effici
     </pre>
 
 .. activecode:: ac9_5_3
+   :language: python
+   :autograde: unittest
    :available_files: emotion_words.txt
    :practice: T
 
