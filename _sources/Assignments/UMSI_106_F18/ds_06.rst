@@ -86,7 +86,7 @@ Week 6 Discussion Section
     :autograde: unittest
     :hidecode:
 
-    **4.** Define a function called ``circle_metrics`` whose input is a float representing a circle's radius, ``r``. Your function should return a tuple where the first item represents the circle's circumference (computed by ``2*pi*r``) and whose second item represents the circle's area (computed by ``pi*r*r``).
+    **4.** Define a function called ``circle_metrics`` whose input is a float representing a circle's radius, ``r``. Your function should return a list where the first item represents the circle's circumference (computed by ``2*pi*r``) and the second item represents the circle's area (computed by ``pi*r*r``).
 
     ~~~~
     pi = 3.141592653589793
@@ -95,7 +95,7 @@ Week 6 Discussion Section
         # Write your code here
         print(r)
 
-    circumference, area = circle_metrics(10)
+    print(circle_metrics(10))
 
     =====
 
@@ -116,7 +116,7 @@ Week 6 Discussion Section
     :autograde: unittest
     :hidecode:
 
-    **5.** Define a function ``convert_nums``. The function should accept an integer as input, representing a number of hours. It should return a tuple of that number converted to minutes (* 60), and then that number converted to seconds (* 3600). For example, if ``1`` were input into the function, the return value of that invocation should be the tuple ``60, 3600``.
+    **5.** Define a function ``convert_nums``. The function should accept an integer as input, representing a number of hours. It should return a list where the first item is that number converted to minutes (* 60), and the second item is that number converted to seconds (* 3600). For example, if ``1`` were input into the function, the return value of that invocation should be the list ``[60, 3600]``.
 
     ~~~~
     # your definition of convert_nums
@@ -128,9 +128,9 @@ Week 6 Discussion Section
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(convert_nums(1),(60,3600),"incorrect output of function with input 1")
-            self.assertEqual(convert_nums(50),(60*50,3600*50), "incorrect output of function with input 50")
-            self.assertEqual(convert_nums(0), (0,0), "incorrect output of function with input 0")
+            self.assertEqual(convert_nums(1),[60,3600],"incorrect output of function with input 1")
+            self.assertEqual(convert_nums(50),[60*50,3600*50], "incorrect output of function with input 50")
+            self.assertEqual(convert_nums(0), [0,0], "incorrect output of function with input 0")
     myTests().main()
 
 .. activecode:: ds_06_06
