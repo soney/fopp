@@ -79,10 +79,10 @@ Problem Set 5
     class myTests(TestCaseGui):
 
         def testOne(self):
-        self.assertEqual(num_vowels, 32, "testing whether num_vowels is set correctly")
+            self.assertEqual(num_vowels, 32, "testing whether num_vowels is set correctly")
 
         def testOneA(self):
-        self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+            self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
     myTests().main()
 
@@ -105,12 +105,12 @@ Problem Set 5
     class myTests(TestCaseGui):
 
         def testOne(self):
-        self.assertEqual(sorted(vowel_frequencies), sorted({'e': 8, 'i': 11, 'a': 7, 'o': 5, 'u': 3}), "testing whether vowel_frequencies is set correctly")
-        self.assertEqual(sorted(vowel_frequencies.values()), sorted({'e': 8, 'i': 11, 'a': 7, 'o': 5, 'u': 3}.values()), "testing whether vowel_frequencies is set correctly")
-        self.assertEqual(common_vowel, 'i', "testing common_vowel")
+            self.assertEqual(sorted(vowel_frequencies), sorted({'e': 8, 'i': 11, 'a': 7, 'o': 5, 'u': 3}), "testing whether vowel_frequencies is set correctly")
+            self.assertEqual(sorted(vowel_frequencies.values()), sorted({'e': 8, 'i': 11, 'a': 7, 'o': 5, 'u': 3}.values()), "testing whether vowel_frequencies is set correctly")
+            self.assertEqual(common_vowel, 'i', "testing common_vowel")
 
         def testOneA(self):
-        self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+            self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
     myTests().main()
 
@@ -148,7 +148,7 @@ Problem Set 5
         n = yp - 4
         return n * 7
 
-    print yp
+    print(yp)
 
     =====
 

@@ -1,0 +1,244 @@
+.. _discussion_section_06:
+
+Week 6 Discussion Section
+-------------------------
+
+.. activecode:: ds_06_01
+   :language: python
+   :autograde: unittest
+   :hidecode:
+
+   **1.** The file ``statedata.txt`` contains a CSV-formatted string that contains population information for various states. Every state is on a different line. There are four "columns": state name, abbreviation, region, and population. Every column is separated by a comma.
+   Use **accumulation** to find the **least** populous state. Assign that state's name to the variable ``least_pop``.
+
+   Hint: First create a dictionary that maps state names to populations
+   Hint: Use ``int()`` to cast the population as an integer
+   ~~~~
+   # COLUMNS:
+   # 0: state name
+   # 1: state abbreviation
+   # 2: region
+   # 3: population
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+      def testOne(self):
+         self.assertEqual(least_pop, 'Wyoming')
+
+      def testOneA(self):
+         self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+
+.. activecode:: ds_06_02
+   :language: python
+   :autograde: unittest
+   :hidecode:
+   :chatcodes:
+
+   **2.** We have ``statedata.txt`` from before. This time, use **dictionary accumulation** to create a dictionary called ``region_pop`` that maps *regions* (e.g. ``'Midwest'``) to the total population for that region. Then, use the max accumulation pattern to find the **most** populous region and store it in ``high_region_pop``.
+
+   ~~~~
+   # COLUMNS:
+   # 0: state name
+   # 1: state abbreviation
+   # 2: region
+   # 3: population
+
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+       def testOne(self):
+           answer = {'South': 119113041, 'West': 75187681, 'Northeast': 56152333, 'Midwest': 67745108}
+           self.assertEqual(sorted(region_pop.values()), sorted(answer.values()), "Checking values")
+           self.assertEqual(sorted(region_pop.keys()), sorted(answer.keys()), "Checking values")
+           self.assertEqual(high_region_pop, "South", "Checking high_region_pop")
+           self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+   myTests().main()
+
+.. activecode:: ds_06_03
+   :language: python
+   :autograde: unittest
+   :hidecode:
+
+   **3.** Define a function ``mostCommonWord`` that accepts a string as an argument and returns the word that appears the most frequently in that string (the word itself; not its frequency).
+
+   ~~~~
+   ====
+   from unittest.gui import TestCaseGui
+   class myTests(TestCaseGui):
+      def testOne(self):
+         self.assertEqual(mostCommonWord('x'), 'x', "testing mostCommonWord with a one-word sentence")
+         self.assertEqual(mostCommonWord('x y y z'), 'y', "testing mostCommonWord with a four-word sentence")
+         self.assertEqual(mostCommonWord('this is a a a sentence'), 'a', "testing mostCommonWord with a sentence")
+   myTests().main()
+
+.. activecode:: ds_06_04
+    :language: python
+    :autograde: unittest
+    :hidecode:
+
+    **4.** Define a function called ``circle_metrics`` whose input is a float representing a circle's radius, ``r``. Your function should return a tuple where the first item represents the circle's circumference (computed by ``2*pi*r``) and whose second item represents the circle's area (computed by ``pi*r*r``).
+
+    ~~~~
+    pi = 3.141592653589793
+
+    def circle_metrics(r):
+        # Write your code here
+        print(r)
+
+    circumference, area = circle_metrics(10)
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testCode(self):
+            c,a = circle_metrics(100)
+            self.assertTrue(abs(c-2*pi*100) < 0.0001, "Testing for example input")
+            self.assertTrue(abs(a-pi*(100*100)) < 0.0001, "Testing for example input")
+
+    myTests().main()
+
+
+.. activecode:: ds_06_05
+    :language: python
+    :autograde: unittest
+    :hidecode:
+
+    **5.** Define a function ``convert_nums``. The function should accept an integer as input, representing a number of hours. It should return a tuple of that number converted to minutes (* 60), and then that number converted to seconds (* 3600). For example, if ``1`` were input into the function, the return value of that invocation should be the tuple ``60, 3600``.
+
+    ~~~~
+    # your definition of convert_nums
+
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(convert_nums(1),(60,3600),"incorrect output of function with input 1")
+            self.assertEqual(convert_nums(50),(60*50,3600*50), "incorrect output of function with input 50")
+            self.assertEqual(convert_nums(0), (0,0), "incorrect output of function with input 0")
+    myTests().main()
+
+.. activecode:: ds_06_06
+    :language: python
+    :autograde: unittest
+    :hidecode:
+
+    **6.** Define a function called ``my_map`` that accepts two arguments: a list ``L`` and a function ``fn``. Your function should "map" ``fn`` onto ``L``, meaning that it should call ``fn`` on each individual element of ``L`` and return a list whose values are ``fn`` called on each element.
+
+    In other words, given a list ``L == [{a},{b},{c}, ... {z}]``, ``my_map(fn,L)`` should return ``[fn({a}), fn({b}), fn({c}), ... fn({z})]``.
+
+    ~~~~
+    def my_map(fn, l):
+        pass
+    
+    def mul2(x):
+        return x*2
+
+    print(my_map(mul2, [1,2,3])) # should be [2,4,6]
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testCode(self):
+            self.assertEqual(my_map(lambda x: x, [1,2,3]), [1,2,3], "Example input")
+            self.assertEqual(my_map(lambda x: x, []), [], "Example input")
+            self.assertEqual(my_map(lambda x: x*5, [10, 20]), [50, 100], "Example input")
+            self.assertEqual(my_map(lambda c: c+'x', ["A", "B"]), ["Ax", "Bx"], "Example input")
+
+    myTests().main()
+
+.. activecode:: ds_06_07
+    :language: python
+    :autograde: unittest
+    :hidecode:
+
+    **7.** Define a function ``onlyEvenWords`` that accepts a string and returns a new string that only contains words where the length of the word is even.
+
+
+    ~~~~
+    def onlyEvenWords(s):
+        # your definition of onlyEvenWords
+        pass
+
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(onlyEvenWords('this is an example of a sentence'), 'this is an of sentence')
+            self.assertEqual(onlyEvenWords('s by sw'), 'by sw')
+            self.assertEqual(onlyEvenWords('x'), '')
+            self.assertEqual(onlyEvenWords(''), '')
+    myTests().main()
+
+.. datafile:: statedata.txt
+
+   Alabama,AL,South,4849377
+   Alaska,AK,West,736732
+   Arizona,AZ,West,6731484
+   Arkansas,AR,South,2966369
+   California,CA,West,38802500
+   Colorado,CO,West,5355866
+   Connecticut,CT,Northeast,3596677
+   Delaware,DE,South,935614
+   Florida,FL,South,19893297
+   Georgia,GA,South,10097343
+   Hawaii,HI,West,1419561
+   Idaho,ID,West,1634464
+   Illinois,IL,Midwest,12880580
+   Indiana,IN,Midwest,6596855
+   Iowa,IA,Midwest,3107126
+   Kansas,KS,Midwest,2904021
+   Kentucky,KY,South,4413457
+   Louisiana,LA,South,4649676
+   Maine,ME,Northeast,1330089
+   Maryland,MD,South,5976407
+   Massachusetts,MA,Northeast,6745408
+   Michigan,MI,Midwest,9909877
+   Minnesota,MN,Midwest,5457173
+   Mississippi,MS,South,2994079
+   Missouri,MO,Midwest,6063589
+   Montana,MT,West,1023579
+   Nebraska,NE,Midwest,1881503
+   Nevada,NV,West,2839099
+   New Hampshire,NH,Northeast,1326813
+   New Jersey,NJ,Northeast,8938175
+   New Mexico,NM,West,2085572
+   New York,NY,Northeast,19746227
+   North Carolina,NC,South,9943964
+   North Dakota,ND,Midwest,739482
+   Ohio,OH,Midwest,11594163
+   Oklahoma,OK,South,3878051
+   Oregon,OR,West,3970239
+   Pennsylvania,PA,Northeast,12787209
+   Rhode Island,RI,Northeast,1055173
+   South Carolina,SC,South,4832482
+   South Dakota,SD,Midwest,853175
+   Tennessee,TN,South,6549352
+   Texas,TX,South,26956958
+   Utah,UT,West,2942902
+   Vermont,VT,Northeast,626562
+   Virginia,VA,South,8326289
+   Washington,WA,West,7061530
+   West Virginia,WV,South,1850326
+   Wisconsin,WI,Midwest,5757564
+   Wyoming,WY,West,584153
