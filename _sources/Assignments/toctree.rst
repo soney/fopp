@@ -15,3 +15,4 @@ Assignments
    UMSI_106_F18/ds_04.rst
    UMSI_106_F18/ds_05.rst
    UMSI_106_F18/ds_06.rst
+   UMSI_106_F18/ds_07.rst
