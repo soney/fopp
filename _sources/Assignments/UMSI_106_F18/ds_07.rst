@@ -1,11 +1,4 @@
-..  Copyright (C)  Brad Miller, David Ranum, Jeffrey Elkner, Peter Wentworth, Allen B. Downey, Chris
-    Meyers, and Dario Mitchell.  Permission is granted to copy, distribute
-    and/or modify this document under the terms of the GNU Free Documentation
-    License, Version 1.3 or any later version published by the Free Software
-    Foundation; with Invariant Sections being Forward, Prefaces, and
-    Contributor List, no Front-Cover Texts, and no Back-Cover Texts.  A copy of
-    the license is included in the section entitled "GNU Free Documentation
-    License".
+.. _discussion_section_07:
 
 Week 7 Discussion Section
 -------------------------
@@ -14,6 +7,7 @@ Week 7 Discussion Section
 
 .. activecode:: ee_Opt_Params_01
    :tags: OptionalAndKeywordParameters/OptionalParameters.rst
+   :hidecode:
 
    =====
 
@@ -29,47 +23,11 @@ Week 7 Discussion Section
    myTests().main()
 
 
-1.1 Define a function called ``multiply``. It should have one required parameter, a string. It should also have one optional parameter, an integer, named ``mult_int``, with a default value of 10. The function should return the string multiplied by the integer. (i.e.: Given inputs "Hello", mult_int=3, the function should return "HelloHelloHello")
-
-.. activecode:: ee_optparams_011
-   :tags: OptionalAndKeywordParameters/OptionalParameters.rst
-
-   def multiply():
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(multiply("Hello", mult_int = 3), "HelloHelloHello", "Testing the function multiply on inputs 'Hello', 3.")
-         self.assertEqual(multiply("Goodbye"), "GoodbyeGoodbyeGoodbyeGoodbyeGoodbyeGoodbyeGoodbyeGoodbyeGoodbyeGoodbye", "Testing the function mulitply on input 'Goodbye'.")
-
-   myTests().main()
-
-1.2 Create a function called ``mult`` that has two parameters, the first is required and should be an integer, the second is an optional parameter that can either be a number or a string but whose default is 6. The function should return the first parameter multiplied by the second.
-
-.. activecode:: ee_opt_params_012
-   :tags: OptionalAndKeywordParameters/OptionalParameters.rst
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(mult(2), 12, "Testing that mult returns the correct value on input (2)")
-         self.assertEqual(mult(5,3), 15, "Testing that mult returns the correct value on input (3,5)")
-         self.assertEqual(mult(4,"hello"), "hellohellohellohello", "testing that mult returns the correct value on input (4, 'hello'")
-
-   myTests().main()
-
 2. The following function, ``greeting``, does not work. Please fix the code so that it runs without error. This only requires one change in the definition of the function.
 
 .. activecode:: ee_Opt_Params_02
    :tags: OptionalAndKeywordParameters/KeywordParameters.rst
+   :hidecode:
 
    def greeting(greeting = "Hello ", name, excl = "!"):
        return greeting + name + excl
@@ -85,50 +43,12 @@ Week 7 Discussion Section
 
    myTests().main()
 
-2.1 Below is a function, ``sum``, that does not work. Change the function definition so the code works. The function should still have a required parameter, intx, and an optional parameter, intz with a defualt value of 5. 
 
-.. activecode:: ee_optparams_021
-   :tags: OptionalAndKeywordParameters/OptionalParameters.rst
-
-   def sum(intz=5, intx):
-       return intz + intx
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(sum(8, intz = 2), 10, "Testing the function sum on inputs 8, 2.")
-         self.assertEqual(sum(12), 17, "Testing the function sum on input 12.")
-
-   myTests().main()
-
-2.2 Currently the function is supposed to take 1 required parameter, and 2 optional parameters, however the code doesn't work. Fix the code so that it passes the test. This should only require changing one line of code.   
-
-.. activecode:: ee_opt_params_022
-   :tags: OptionalAndKeywordParameters/OptionalParameters.rst
-
-   def waste(var = "Water", mar, marble = "type"):
-       final_string = var + " " + marble + " " + mar
-       return final_string
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(waste("Pokemon"), "Water type Pokemon", "Testing that waste returns the correct string on input 'Pokemon'")
-
-   myTests().main()
-
-3. Write a function, ``test``, that takes in three parameters: a required integer, an optional boolean whose default value is ``True``, and an optional dictionary whose default value is ``{2:3, 4:5, 6:8}``. If the boolean parameter is True, the function should test to see if the integer is a key in the dictionary. The value of that key should then be returned. If the boolean parameter is False, return the boolean value "False". If the boolean parameter is False, the function should return "None".
+3. Write a function, ``test``, that takes in three parameters: a required integer, an optional boolean whose default value is ``True``, and an optional dictionary (named ``dict1``) whose default value is ``{2:3, 4:5, 6:8}``. If the boolean parameter is ``True``, the function should test to see if the integer is a key in the dictionary. The value of that key should then be returned (if it is **not** a key, return ``None``). If the boolean parameter is ``False``, return the boolean value ``False``.
 
 .. activecode:: ee_Opt_Params_03
    :tags: OptionalAndKeywordParameters/OptionalParameters.rst
+   :hidecode:
       
    =====
 
@@ -143,57 +63,12 @@ Week 7 Discussion Section
 
    myTests().main()
 
-3.1 Define a function called ``nums`` that has three parameters. The first parameter, an integer, should be required. A second parameter named ``mult_int`` should be optional with a default value of 5. The final parameter, ``switch``, should also be optional with a default value of False. The function should multiply the two integers together, and if switch is True, should change the sign of the product before returning it. 
 
-.. activecode:: ee_optparams_031
-   :tags: OptionalAndKeywordParameters/KeywordParameters.rst
-
-   def nums():
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(nums(5), 25, "Testing the function nums on input 5.")
-         self.assertEqual(nums(2, mult_int = 4), 8, "Testing the function nums on inputs 2, mult_int = 4.")
-         self.assertEqual(nums(3, switch = True), -15, "Testing the function nums on inputs 3, switch = True.")
-         self.assertEqual(nums(4, mult_int = 3, switch = True), -12, "Testing the function nums on inputs 4, mult_int = 3, switch = True.")
-         self.assertEqual(nums(0, switch = True), 0, "Testing the function nums on inputs 0, switch = True.")
-
-   myTests().main()  
-
-3.2 Write a function called ``checkingIfIn`` that takes three parameters. The first is a required parameter, which should be a string. The second is an optional parameter called ``direction`` with a default value of ``True``. The third is an optional parameter called ``d`` that has a default value of ``{'apple': 2, 'pear': 1, 'fruit': 19, 'orange': 5, 'banana': 3, 'grapes': 2, 'watermelon': 7}``. Write the function ``checkingIfIn`` so that when the second parameter is ``True``, it checks to see if the first parameter is a key in the third parameter; if it is, return ``True``, otherwise return ``False``. 
-
-But if the second parameter is ``False``, then the function should check to see if the first parameter is *not* a key of the third. If it's *not*, the function should return ``True`` in this case, and if it is, it should return ``False``.
-
-.. activecode:: ee_opt_params_032
-   :tags: OptionalAndKeywordParameters/KeywordParameters.rst, OptionalAndKeywordParameters/OptionalParameters.rst
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testOne(self):
-         self.assertEqual(checkingIfIn('grapes'), True, "Testing that checkingIfIn returns the correct boolean on input 'grapes'")
-         self.assertEqual(checkingIfIn('carrots'), False, "Testing that checkingIfIn returns the correct boolean on input 'carrots'")
-         self.assertEqual(checkingIfIn('grapes', False), False, "Testing that checkingIfIn returns the correct boolean on input ('grapes', False)")
-         self.assertEqual(checkingIfIn('carrots', False), True, "Testing that checkingIfIn returns the correct boolean on input ('carrots', False)")
-         self.assertEqual(checkingIfIn('grapes', d = {'carrots': 1, 'peas': 9, 'potatos': 8, 'corn': 32, 'beans': 1}), False, "Testing that checkingIfIn returns the correct boolean on input ('grapes', d = {'carrots': 1, 'peas': 9, 'potatos': 8, 'corn': 32, 'beans': 1})")
-         self.assertEqual(checkingIfIn('peas', d = {'carrots': 1, 'peas': 9, 'potatos': 8, 'corn': 32, 'beans': 1}), True, "Testing that checkingIfIn returns the correct boolean on input ('peas', d = {'carrots': 1, 'peas': 9, 'potatos': 8, 'corn': 32, 'beans': 1})")
-         self.assertEqual(checkingIfIn('peas', False, {'carrots': 1, 'peas': 9, 'potatos': 8, 'corn': 32, 'beans': 1}), False, "Testing that checkingIfIn returns the correct boolean on input ('peas', False, {'carrots': 1, 'peas': 9, 'potatos': 8, 'corn': 32, 'beans': 1})")
-         self.assertEqual(checkingIfIn('apples', False, {'carrots': 1, 'peas': 9, 'potatos': 8, 'corn': 32, 'beans': 1}), True, "Testing that checkingIfIn returns the correct boolean on input ('apples', False, {'carrots': 1, 'peas': 9, 'potatos': 8, 'corn': 32, 'beans': 1})")
-
-   myTests().main()
-
-4. Write a function called ``together`` that takes three parameters, the first is a required parameter that is a number (integer or float), the second is a required parameter that is a string, and the third is an optional parameter whose default is " ". What is returned is the first parameter, concatenated with the second, using the third.
+4. Write a function called ``together`` that takes three parameters, the first is a required parameter that is a number (integer or float), the second is a required parameter that is a string, and the third is an optional parameter whose default is ``" "``. What is returned is the first parameter, concatenated with the second, using the third.
 
 .. activecode:: ee_opt_params_042
    :tags: OptionalAndKeywordParameters/OptionalParameters.rst
+   :hidecode:
 
    =====
 
@@ -213,6 +88,7 @@ But if the second parameter is ``False``, then the function should check to see 
 
 .. activecode:: ee_opt_params_052
    :tags: OptionalAndKeywordParameters/KeywordParameters.rst, OptionalAndKeywordParameters/OptionalParameters.rst
+   :hidecode:
 
    def checkingIfIn(a, direction = True, d = {'apple': 2, 'pear': 1, 'fruit': 19, 'orange': 5, 'banana': 3, 'grapes': 2, 'watermelon': 7}):
        if direction == True:
@@ -230,7 +106,7 @@ But if the second parameter is ``False``, then the function should check to see 
 
    # Call the fucntion so that it returns True and assign it to the variable c_true
 
-   # Call the function so that the value of fruit is assigned to the variable fruit_ans
+   # Call the function so that the value of fruit (19) is assigned to the variable fruit_ans
 
    # Call the function using the first and third parameter so that the value 8 is assigned to the variable param_check
 
@@ -254,10 +130,11 @@ But if the second parameter is ``False``, then the function should check to see 
 
 
 
-6. Create a tuple called ``olympics`` with four elements: "Beijing", "London", "Rio", "Tokyo".
+6. Create a tuple called ``olympics`` with four elements: ``"Beijing"``, ``"London"``, ``"Rio"``, ``"Tokyo"``.
 
 .. activecode:: ee_Ch09_01
    :tags: Tuples/Tuples.rst
+   :hidecode:
       
    =====
 
@@ -274,6 +151,7 @@ But if the second parameter is ``False``, then the function should check to see 
 
 .. activecode:: ee_ch09_02
    :tags: Tuples/Tuples.rst
+   :hidecode:
 
    tuples_lst = [('Beijing', 'China', 2008), ('London', 'England', 2012), ('Rio', 'Brazil', 2016, 'Current'), ('Tokyo', 'Japan', 2020, 'Future')]
       
@@ -290,6 +168,7 @@ But if the second parameter is ``False``, then the function should check to see 
 
 .. activecode:: ee_ch09_03
    :tags: Tuples/TupleAssignmentwithunpacking.rst
+   :hidecode:
 
    olymp = ('Rio', 'Brazil', 2016)
       
@@ -307,8 +186,8 @@ But if the second parameter is ``False``, then the function should check to see 
 
 9. Define a function called ``info`` with five parameters: name, gender, age, bday_month, and hometown. The function should then return a tuple with all five parameters in that order. 
 
-.. activecode:: ee_ch09_04
-   :tags: Tuples/TuplesasReturnValues.rst
+.. activecode:: tuples_user_info
+   :hidecode:
 
    =====
 
@@ -317,6 +196,57 @@ But if the second parameter is ``False``, then the function should check to see 
    class myTests(TestCaseGui):
 
       def testFour(self):
-         self.assertEqual(info("Sue", "Female", 20, "March", "Ann Arbor"), ("Sue", "Female", 20, "March", "Ann Arbor"), "Testing that info('Sue', 'Female', 20, 'March', 'Ann Arbor') returns('Sue', 'Female', 20, 'March', 'Ann Arbor')")
+         self.assertEqual(info("Sue", "Female", 20, "March", "Ann Arbor"), ("Sue", "Female", 20, "March", "Ann Arbor"), "Testing that info('Sue', 'Female', 20, 'March', 'Ann Arbor') returns ('Sue', 'Female', 20, 'March', 'Ann Arbor')")
+
+   myTests().main()
+
+10. Define a **lambda** function called ``alwaysBlue`` that accepts no arguments and returns the string ``'blue'``.
+
+.. activecode:: lambda_alwaysblue
+   :hidecode:
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testFour(self):
+         self.assertEqual(alwaysBlue(), 'blue', "Testing that alwaysBlue() returns 'blue'")
+         self.assertIn('lambda', self.getEditorText(), "Testing that you used the keyword lambda")
+
+11. Define a **lambda** function called ``plus3`` that accepts one argument (a number) and returns that argumut plus ``3``.
+
+.. activecode:: lambda_plus3
+   :hidecode:
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testFour(self):
+         self.assertEqual(plus3(5), 8, "Testing that plus3(5) returns 8")
+         self.assertEqual(plus3(-1), 2, "Testing that plus3(-1) returns 2")
+         self.assertIn('lambda', self.getEditorText(), "Testing that you used the keyword lambda")
+
+   myTests().main()
+
+12. Define a **lambda** function called ``prod`` that accepts two arguments (both numbers) and returns the product (multiplication) of those two numbers.
+
+.. activecode:: lambda_prod
+   :hidecode:
+
+   =====
+
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+      def testFour(self):
+         self.assertEqual(prod(5, 5), 25, "Testing that prod(5, 5) returns 25")
+         self.assertEqual(prod(2, 9), 18, "Testing that prod(2, 9) returns 18")
+         self.assertIn('lambda', self.getEditorText(), "Testing that you used the keyword lambda")
 
    myTests().main()
