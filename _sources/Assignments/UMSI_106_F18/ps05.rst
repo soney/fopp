@@ -1,0 +1,291 @@
+.. _problem_set_05:
+
+Problem Set 5
+-------------
+
+**Instructions:** Write the code you want to save in the provided boxes, and click **Save & Run** for each one. That will  *run* your code, so you can see the output, if any, and the result of the tests, if there are any. It will also *save* your code. You should run your code each time you want to save it. You can then load the history of the code you have run and saved. The *last* code you have saved for each problem by the deadline is what will be graded.
+
+.. activecode:: ps_05_01
+    :language: python
+    :autograde: unittest
+    :hidecode:
+
+    Given the string ``s`` in the code below, write code to figure out what the most common **letter** in the string is and assign that to the variable ``common_letter``. (Do not hard-code the right answer.) Hint: use dictionary accumulation and then max accumulation
+    ~~~~
+    s = """
+    peter piper picked a peck of pickled peppers;
+    a peck of pickled peppers peter picked;
+    if peter piper picked a peck of pickled peppers,
+    where's the peck of pickled peppers peter picked?
+    """
+
+    # Write your code here.
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(common_letter, 'e', "testing whether common_letter is set correctly")
+
+        def testOneA(self):
+            self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+    myTests().main()
+
+.. activecode:: ps_05_02
+    :language: python
+    :autograde: unittest
+    :hidecode:
+
+    Given the string ``s`` in the code below, write code to figure out what the most common **word** in the string is and assign that to the variable ``common_word``. (Do not hard-code the right answer.) Hint: dictionary mechanics will be useful here.
+    ~~~~
+    s = "Number of slams in an old screen door depends upon how loud you shut it, the count of slices in a bread depends how thin you cut it, and amount 'o good inside a day depends on how well you live 'em. All depends, all depends, all depends on what's around ya."
+
+    # Write your code here.
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(common_word, 'depends', "testing whether common_word is set correctly")
+
+        def testOneA(self):
+            self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+    myTests().main()
+
+
+.. activecode:: ps_05_03
+    :language: python
+    :autograde: unittest
+    :hidecode:
+
+    Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``. For this problem, vowels are only a, e, i, o, and u. Hint: use the ``in`` operator with ``vowels``.
+    ~~~~
+    s = "singing in the rain and playing in the rain are two entirely different situations but both can be fun"
+    vowels = ['a','e','i','o','u']
+
+    # Write your code here.
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(num_vowels, 32, "testing whether num_vowels is set correctly")
+
+        def testOneA(self):
+            self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+    myTests().main()
+
+.. activecode:: ps_05_04
+    :language: python
+    :autograde: unittest
+    :hidecode:
+
+    Write code that will create a dictionary ``vowel_frequencies`` where the keys are the five vowels and the values are how often the vowel appears in the string ``s``. Then, using ``vowel_frequencies``, determine the most common vowel in ``s`` and assign the result to the variable ``common_vowel``. Use dictionary accumulation and do not hard code the answer.
+    ~~~~
+    s = "singing in the rain and playing in the rain are two entirely different situations but both can be good fun"
+    vowels = ['a','e','i','o','u']
+
+    # Write your code here.
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(sorted(vowel_frequencies), sorted({'e': 8, 'i': 11, 'a': 7, 'o': 5, 'u': 3}), "testing whether vowel_frequencies is set correctly")
+            self.assertEqual(sorted(vowel_frequencies.values()), sorted({'e': 8, 'i': 11, 'a': 7, 'o': 5, 'u': 3}.values()), "testing whether vowel_frequencies is set correctly")
+            self.assertEqual(common_vowel, 'i', "testing common_vowel")
+
+        def testOneA(self):
+            self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+    myTests().main()
+
+.. activecode:: ps_05_05
+    :language: python
+    :autograde: unittest
+    :hidecode:
+
+    Take a look at the code below. The function ``subtract_five`` is supposed to take one integer as input and return that integer minus 5. You'll get an error if you run it as is. Change the function so it works and passes the test!
+
+    ~~~~
+    def subtract_five(inp):
+        print inp-5
+
+    y = subtract_five(9) - 6
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(y, -2, "Testing if y is -2")
+    myTests().main()
+
+.. activecode:: ps_05_06
+    :language: python
+    :autograde: unittest
+    :hidecode:
+
+    Here's another bit of code that generates an error. Think about what's going on with the code below that causes a problem. Why does it cause an error? Write a comment explaining why an error occurs. Then change line 5 to print out the result of an expression that invokes the function ``change_amounts`` and evaluates to ``7``. (So line 5 should be a print statement whose result is printing the integer ``7``.)
+
+    ~~~~
+    def change_amounts(yp):
+        n = yp - 4
+        return n * 7
+
+    print(yp)
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertIn("7", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+
+    myTests().main()
+
+.. activecode:: ps_05_07
+    :language: python
+    :autograde: unittest
+    :hidecode:
+
+    Define a function called ``change_amounts`` that takes one integer as input. If the input is larger than 10, it should return the input + 5. If the input is smaller than or equal to 10, it should return the input + 2.
+
+    ~~~~
+    # We've started you off with the first line...
+    def change_amounts(num_here):
+        pass # delete this line and put in your own code for the body of the function
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(change_amounts(9), 11, "Testing if change_amounts(9) equals 11")
+            self.assertEqual(change_amounts(12), 17, "Testing if change_amounts(12) equals 17")
+
+    myTests().main()
+
+.. activecode:: ps_05_08
+    :language: python
+    :autograde: unittest
+    :hidecode:
+
+    Write a function named ``words_starting_with`` that accepts a string ``sentence`` as an argument and returns a dictionary whose keys are letters that words in ``sentence`` start with and each value is a list of words starting with that letter. For example:
+
+    ``words_starting_with("this is the correct terminal")`` returns:
+    ``{ "t": ["this", "the", "terminal"], "i": ["is"], "c": ["correct"]}``
+
+    ~~~~
+    # We've started you off with the first line...
+    def words_starting_with(sentence):
+        return {} # delete this line and put in your own code for the body of the function
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            R1 = words_starting_with("the quick brown fox jumps over the lazy dog")
+            self.assertEqual(R1['q'], ['quick'], "Testing sentence")
+            R2 = words_starting_with("")
+            self.assertEqual(R2, {}, "Testing empty sentence")
+            R3 = words_starting_with("peter piper picked a peck of pickled peppers")
+            self.assertEqual(sorted(R3['p']), sorted(['peter', 'piper', 'picked', 'peck', 'pickled', 'peppers']), "Testing example sentence")
+
+    myTests().main()
+
+.. activecode:: ps_05_09
+    :language: python
+    :autograde: unittest
+    :hidecode:
+
+    Define a function called ``shortest_string`` that takes a list of strings as input and returns the string with the fewest characters in it. (You can assume that one string in any input list will be shorter than the rest.) If the list of strings is empty, your code should return ``False``
+
+    ~~~~
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(shortest_string(["ABCDE", "ABC", "ABCDEFGH"]), "ABC", "Testing for example input")
+            self.assertEqual(shortest_string([]), False, "Testing for empty input")
+            self.assertEqual(shortest_string(["X", "X"*(10**4), "ABCDEFGH"]), "X", "Testing for example input")
+            self.assertEqual(shortest_string(["", "X"*(10**4)]), "", "Testing for example input")
+
+    myTests().main()
+
+.. activecode:: ps_05_10
+    :language: python
+    :autograde: unittest
+    :chatcodes:
+    :hidecode:
+
+    Define a function called ``mult_both`` whose input is two integers, whose default parameter values are the integers 3 and 4. The function's return value should be the two input integers multiplied together.
+
+    ~~~~
+    # Write your code here
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testCode(self):
+            self.assertIn("3", self.getEditorText(), "Testing code. (Don't worry about actual and expected output)")
+            self.assertIn("4", self.getEditorText(), "Testing code. (Don't worry about actual and expected output)")
+
+        def testOne(self):
+            self.assertEqual(mult_both(), 12, "Testing whether your function works as expected (calling the function mult_both)")
+            self.assertEqual(mult_both(5,10), 50, "Testing whether your function works as expected (calling the function mult_both)")
+
+    myTests().main()
+
+.. activecode:: ps_05_11
+    :language: python
+    :autograde: unittest
+    :chatcodes:
+    :hidecode:
+
+    Define a function called ``max_and_min`` that returns a tuple containing the maximum and minimum numbers in a list. If the list is empty, your function should return ``(False, False)``
+    ~~~~
+    def max_and_min(L):
+        # Write your code here
+        pass
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testCode(self):
+            self.assertEqual(max_and_min([1,2,3]), (3,1), "Testing for [1,2,3]")
+            self.assertEqual(max_and_min([5]), (5,5), "Testing for [5]")
+            self.assertEqual(max_and_min([]), (False,False), "Testing for []")
+
+    myTests().main()

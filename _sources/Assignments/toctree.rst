@@ -9,7 +9,10 @@ Assignments
    UMSI_106_F18/ps02.rst
    UMSI_106_F18/ps03.rst
    UMSI_106_F18/ps04.rst
+   UMSI_106_F18/ps05.rst
    UMSI_106_F18/ds_02.rst
    UMSI_106_F18/ds_03.rst
    UMSI_106_F18/ds_04.rst
    UMSI_106_F18/ds_05.rst
+   UMSI_106_F18/ds_06.rst
+   UMSI_106_F18/ds_07.rst
