@@ -358,6 +358,7 @@ Chapter Assessment - Split and Join
 .. activecode:: assess_ac_4_1_3_2
     :autograde: unittest
     :language: python
+    :autograde: unittest
     :practice: T
     :topics: TransformingSequences/MutatingMethods
 

@@ -121,6 +121,8 @@ until later in this course. We don't need them for handling data from files.
    :language: python
    :autograde: unittest
    :available_files: travel_plans2.txt
+   :language: python
+   :autograde: unittest
    :practice: T
 
    2. Find the number of lines in the file, ``travel_plans2.txt``, and assign it to the variable ``num_lines``.
@@ -154,6 +156,8 @@ until later in this course. We don't need them for handling data from files.
    :language: python
    :autograde: unittest
    :available_files: emotion_words2.txt
+   :language: python
+   :autograde: unittest
    :practice: T
    
    3. Create a string called ``first_forty`` that is comprised of the first 40 characters of ``emotion_words2.txt``. 

@@ -111,6 +111,8 @@ to read it. And when you start dealing with big files, you may notice the effici
    :language: python
    :autograde: unittest
    :available_files: emotion_words.txt
+   :language: python
+   :autograde: unittest
    :practice: T
 
    1. Write code to find out how many lines are in the file ``emotion_words.txt`` as shown above. Save this value to the variable ``num_lines``. Do not use the len method.
