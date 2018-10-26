@@ -164,6 +164,8 @@ Week 7 Discussion Section
       def testTwo(self):
          self.assertEqual(country, ['China', 'England', 'Brazil', 'Japan'], "Testing that third is assigned to correct values")
 
+   myTests().main()
+
 8. With only one line of code, assign the variables ``city``, ``country``, and ``year`` to the values of the tuple ``olymp``.
 
 .. activecode:: ee_ch09_03
@@ -183,6 +185,7 @@ Week 7 Discussion Section
          self.assertEqual(country, "Brazil", "Testing that country is assigned to correct value.")
          self.assertEqual(year, 2016, "Testing that year is assigned to correct value.")
 
+   myTests().main()
 
 9. Define a function called ``info`` with five parameters: name, gender, age, bday_month, and hometown. The function should then return a tuple with all five parameters in that order. 
 
@@ -214,6 +217,8 @@ Week 7 Discussion Section
       def testFour(self):
          self.assertEqual(alwaysBlue(), 'blue', "Testing that alwaysBlue() returns 'blue'")
          self.assertIn('lambda', self.getEditorText(), "Testing that you used the keyword lambda")
+
+   myTests().main()
 
 11. Define a **lambda** function called ``plus3`` that accepts one argument (a number) and returns that argumut plus ``3``.
 
