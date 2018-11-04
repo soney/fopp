@@ -77,77 +77,16 @@ Table of Contents
    Sorting/toctree.rst
    NestedData/toctree.rst
    TestCases/toctree.rst
+   PythonModules/toctree.rst
+   Requests/toctree.rst
+   RESTAPIs/toctree.rst
    Exceptions/toctree.rst
+   UsingRESTAPIs/toctree.rst
    Classes/toctree.rst
    BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
    AdvancedAccumulation/toctree.rst 
    Assignments/toctree.rst 
-   
-Python Modules
-::::::::::::::
-
-.. toctree::
-   :maxdepth: 2
-
-   PythonModules/intro-ModulesandGettingHelp.rst
-   PythonModules/Therandommodule.rst
-   Installation/pip.rst
-   PythonModules/Glossary.rst
-   PythonModules/Exercises.rst
-   PythonModules/ExtraExercises.rst
-
-
-Requests
-::::::::
-
-.. toctree::
-   :maxdepth: 2
-
-   Requests/intro.rst
-   Requests/fetching_a_page.rst
-   Requests/how_the_Internet_works.rst
-   Requests/urls.rst
-   Requests/http.rst
-   Requests/requests_details.rst
-
-
-REST APIs
-:::::::::
-
-.. toctree::
-   :maxdepth: 2
-
-   RESTAPIs/intro.rst
-   RESTAPIs/RequestURLs.rst
-   RESTAPIs/DebugURLs.rst
-   RESTAPIs/jsonlib.rst
-   RESTAPIs/unicode.rst
-   RESTAPIs/functionswithrestapis.rst
-   RESTAPIs/requestsCookbook.rst
-   
-
-Exceptions
-::::::::::
-
-.. toctree::
-   :maxdepth: 2
-
-   Exceptions/intro-exceptions.rst
-   Exceptions/using-exceptions.rst
-   Exceptions/ExtraExercises.rst
-   
-
-Using RESTAPIs
-::::::::::::::
-
-.. toctree::
-   :maxdepth: 2
-   
-   UsingRESTAPIs/flickr.rst
-   UsingRESTAPIs/cachingResponses.rst
-   UsingRESTAPIs/cachingPattern.rst
-   
 
 Appendices
 ::::::::::
