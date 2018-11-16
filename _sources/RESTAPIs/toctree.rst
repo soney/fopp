@@ -4,10 +4,10 @@ REST APIs
 .. toctree::
    :maxdepth: 2
 
-   RESTAPIs/intro.rst
-   RESTAPIs/RequestURLs.rst
-   RESTAPIs/DebugURLs.rst
-   RESTAPIs/jsonlib.rst
-   RESTAPIs/unicode.rst
-   RESTAPIs/functionswithrestapis.rst
-   RESTAPIs/requestsCookbook.rst
+   intro.rst
+   RequestURLs.rst
+   DebugURLs.rst
+   jsonlib.rst
+   unicode.rst
+   functionswithrestapis.rst
+   requestsCookbook.rst
