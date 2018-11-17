@@ -77,13 +77,16 @@ Table of Contents
    Sorting/toctree.rst
    NestedData/toctree.rst
    TestCases/toctree.rst
+   PythonModules/toctree.rst
+   Requests/toctree.rst
+   RESTAPIs/toctree.rst
    Exceptions/toctree.rst
+   UsingRESTAPIs/toctree.rst
    Classes/toctree.rst
    BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
    AdvancedAccumulation/toctree.rst 
    Assignments/toctree.rst 
-   
 
 Appendices
 ::::::::::
