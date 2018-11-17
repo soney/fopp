@@ -176,6 +176,8 @@ the beginning of the iteration process how many times the block of code needs to
 
 
 .. activecode:: ac14_2_2
+   :language: python
+   :autograde: unittest
    :practice: T
 
    Write a while loop that is initialized at 0 and stops at 15. If the counter is an even number, append the counter to a list called ``eve_nums``.
@@ -193,6 +195,8 @@ the beginning of the iteration process how many times the block of code needs to
    myTests().main()
 
 .. activecode:: ac14_2_3
+    :language: python
+    :autograde: unittest
     :practice: T
 
     Below, we've provided a for loop that sums all the elements of ``list1``. Write code that accomplishes the same task, but instead uses a while loop. Assign the accumulator variable to the name ``accum``.
@@ -218,6 +222,8 @@ the beginning of the iteration process how many times the block of code needs to
     myTests().main()
 
 .. activecode:: ac14_2_4
+    :language: python
+    :autograde: unittest
     :practice: T
 
     Write a function called ``stop_at_four`` that iterates through a list of numbers. Using a while loop, append each number to a new list until the number 4 appears. The function should return the new list.

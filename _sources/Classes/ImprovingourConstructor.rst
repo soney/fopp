@@ -45,6 +45,10 @@ This is a common thing to do in the ``__init__`` method for a class: take in som
 
 .. activecode:: ee_ch13_011
    :tags:Classes/ImprovingourConstructor.rst
+   :language: python
+   :autograde: unittest
+   :practice: T
+
 
       
    =====

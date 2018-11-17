@@ -7,6 +7,7 @@ Week 2 Discussion Section
     :include: sqrt_fn
     :language: python
     :autograde: unittest
+    :practice: T
     :topics: SimplePythonData/FunctionCalls
 
     **1.** Suppose the ``sqrt()`` function returns the square root of its arguments. Write a statement that will assign the square root of ``a`` squared plus the value of ``b`` squared (Pythagorean theorem) to a variable ``c``.
@@ -57,6 +58,7 @@ Week 2 Discussion Section
 .. activecode:: ds_02_03
     :language: python
     :autograde: unittest
+    :practice: T
 
     **3.** Write code that asks the user to enter a temperature in Fahrenheit and prints that temperature in Celsius. The formula to convert Fahrenheit to Celsius is: C = (F-32)*5/9. For example, if the user enters 90, your program should output 32.222. If the user enters -20, your code should output -28.888.
     ~~~~

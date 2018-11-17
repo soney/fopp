@@ -88,6 +88,10 @@ have one additional parameter as compared to the invocation.
 
 .. activecode:: ac_chp13_classes_01
    :tags: Classes/ImprovingourConstructor.rst, Classes/AddingOtherMethodstoourClass.rs
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Classes/AddingOtherMethodstoourClass
 
 
    =====

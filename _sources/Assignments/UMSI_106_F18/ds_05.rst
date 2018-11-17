@@ -55,9 +55,9 @@ Week 5 Discussion Section
     **HINTS:**
     - Printing things with a comma, e.g. ``print("hello", "everyone")`` will print out those things on the same line with  a space in between them: ``hello everyone``.
     - Your code should work no matter what the values corresponding to the keys are!
-
     ~~~~
     d = {"autumn":"spring", "well":"spring", "4":"seasons","23":345}
+
     =====
 
     from unittest.gui import TestCaseGui
@@ -244,6 +244,7 @@ Week 5 Discussion Section
 .. activecode:: ds_05_writing_files
     :language: python
     :autograde: unittest
+    :practice: T
     :available_files: nums.txt
 
     Write code that writes the string ``"hello world"`` to a file named ``myfile.txt``.

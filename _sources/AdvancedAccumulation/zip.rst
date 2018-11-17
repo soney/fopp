@@ -86,6 +86,10 @@ Consider a function called possible, which determines whether a word is still po
 Below we provide function that fulfills that purpose.
 
 .. activecode:: ac21_5_6
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
 
    def possible(word, blanked, guesses_made):
        if len(word) != len(blanked):
@@ -118,6 +122,10 @@ Below we provide function that fulfills that purpose.
 However, we can rewrite that using ``zip``, to be a little more comprehensible.
 
 .. activecode:: ac21_5_7
+   :language: python
+   :autograde: unittest
+   :chatcodes:
+   :practice: T
 
    def possible(word, blanked, guesses_made):
        if len(word) != len(blanked):

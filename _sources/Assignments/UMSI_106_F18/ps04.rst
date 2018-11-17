@@ -91,6 +91,7 @@ Problem Set 4
 .. activecode:: ps_04_reading_files
     :language: python
     :autograde: unittest
+    :practice: T
     :available_files: message.txt
 
     Assign the contents of the file ``message.txt`` to the variable ``msg`` (``msg`` should be a string).
@@ -111,6 +112,7 @@ Problem Set 4
 .. activecode:: ps_04_writing_files
     :language: python
     :autograde: unittest
+    :practice: T
     :available_files: nums.txt
 
     The file ``nums.txt`` contains a list of numbers (each on a separate line). Write code that reads the contents of ``nums.txt``, computes the **square** of every number, and writes the result to ``squares.txt``

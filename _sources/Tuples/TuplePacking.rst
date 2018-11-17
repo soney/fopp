@@ -62,6 +62,9 @@ have omitted the parentheses when first assigning a tuple to the variable julia.
    :practice: T
 
    Which of the following statements will output Atlanta, Georgia
+   
+   .. code-block:: python
+      julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
 
 .. activecode:: ac12_2_1
    :language: python

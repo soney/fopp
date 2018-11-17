@@ -6,7 +6,7 @@ Week 6 Discussion Section
 .. activecode:: ds_06_01
    :language: python
    :autograde: unittest
-   :hidecode:
+   :practice: T
 
    **1.** The file ``statedata.txt`` contains a CSV-formatted string that contains population information for various states. Every state is on a different line. There are four "columns": state name, abbreviation, region, and population. Every column is separated by a comma.
    Use **accumulation** to find the **least** populous state. Assign that state's name to the variable ``least_pop``.
@@ -37,7 +37,7 @@ Week 6 Discussion Section
 .. activecode:: ds_06_02
    :language: python
    :autograde: unittest
-   :hidecode:
+   :practice: T
    :chatcodes:
 
    **2.** We have ``statedata.txt`` from before. This time, use **dictionary accumulation** to create a dictionary called ``region_pop`` that maps *regions* (e.g. ``'Midwest'``) to the total population for that region. Then, use the max accumulation pattern to find the **most** populous region and store it in ``high_region_pop``.
@@ -67,7 +67,7 @@ Week 6 Discussion Section
 .. activecode:: ds_06_03
    :language: python
    :autograde: unittest
-   :hidecode:
+   :practice: T
 
    **3.** Define a function ``mostCommonWord`` that accepts a string as an argument and returns the word that appears the most frequently in that string (the word itself; not its frequency).
 
@@ -84,7 +84,7 @@ Week 6 Discussion Section
 .. activecode:: ds_06_04
     :language: python
     :autograde: unittest
-    :hidecode:
+    :practice: T
 
     **4.** Define a function called ``circle_metrics`` whose input is a float representing a circle's radius, ``r``. Your function should return a list where the first item represents the circle's circumference (computed by ``2*pi*r``) and the second item represents the circle's area (computed by ``pi*r*r``).
 
@@ -114,7 +114,7 @@ Week 6 Discussion Section
 .. activecode:: ds_06_05
     :language: python
     :autograde: unittest
-    :hidecode:
+    :practice: T
 
     **5.** Define a function ``convert_nums``. The function should accept an integer as input, representing a number of hours. It should return a list where the first item is that number converted to minutes (* 60), and the second item is that number converted to seconds (* 3600). For example, if ``1`` were input into the function, the return value of that invocation should be the list ``[60, 3600]``.
 
@@ -136,7 +136,7 @@ Week 6 Discussion Section
 .. activecode:: ds_06_06
     :language: python
     :autograde: unittest
-    :hidecode:
+    :practice: T
 
     **6.** Define a function called ``my_map`` that accepts two arguments: a list ``L`` and a function ``fn``. Your function should "map" ``fn`` onto ``L``, meaning that it should call ``fn`` on each individual element of ``L`` and return a list whose values are ``fn`` called on each element.
 
@@ -167,7 +167,7 @@ Week 6 Discussion Section
 .. activecode:: ds_06_07
     :language: python
     :autograde: unittest
-    :hidecode:
+    :practice: T
 
     **7.** Define a function ``onlyEvenWords`` that accepts a string and returns a new string that only contains words where the length of the word is even.
 

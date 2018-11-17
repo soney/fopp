@@ -192,6 +192,8 @@ Chapter Assessment - Aliases and References
 **Check your understanding**
 
 .. fillintheblank:: assess_question3_3_1_1
+   :autograde: unittest
+   :language: python
    :practice: T
    :topics: TransformingSequences/ObjectsandReferences
 
@@ -448,6 +450,8 @@ Chapter Assessment - For Loop Mechanics
         num += item
 
 .. fillintheblank:: assess_question5_1_1_4
+   :autograde: unittest
+   :language: python
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
