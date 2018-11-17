@@ -15,6 +15,8 @@ Chapter Assessment
 ------------------
 
 .. activecode:: ac14_10_1
+    :language: python
+    :autograde: unittest
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
     
@@ -36,6 +38,8 @@ Chapter Assessment
     myTests().main()
 
 .. activecode:: ac14_10_2
+    :language: python
+    :autograde: unittest
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
 
@@ -57,6 +61,8 @@ Chapter Assessment
     myTests().main()
 
 .. activecode:: ac14_10_3
+    :language: python
+    :autograde: unittest
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
 
@@ -77,6 +83,8 @@ Chapter Assessment
     myTests().main()
 
 .. activecode:: ac14_10_4
+    :language: python
+    :autograde: unittest
     :practice: T
     :topics: MoreAboutIteration/ThewhileStatement
 
@@ -99,6 +107,8 @@ Chapter Assessment
     myTests().main()
 
 .. actex:: ac14_10_5
+    :language: python
+    :autograde: unittest
     :practice: T
     :topics: MoreAboutIteration/ThewhileStatement
 
@@ -125,6 +135,8 @@ Chapter Assessment
     myTests().main()
 
 .. activecode:: ac14_10_6
+    :language: python
+    :autograde: unittest
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
 

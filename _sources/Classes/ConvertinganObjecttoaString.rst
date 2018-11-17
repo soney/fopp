@@ -98,6 +98,9 @@ provide.
 
 .. activecode:: ac_ch13_classstr_01
    :tags: Classes/ImprovingourConstructor.rst, Classes/AddingOtherMethodstoourClass.rst, Classes/ConvertinganObjecttoaString.rst
+   :language: python
+   :autograde: unittest
+   :practice: T
 
 
    =====

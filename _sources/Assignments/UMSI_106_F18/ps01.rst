@@ -222,6 +222,7 @@ Problem Set 1
     :include: addl_functions
     :language: python
     :autograde: unittest
+    :practice: T
     :topics: SimplePythonData/FunctionCalls
 
     **10.** There are a couple functions we're giving you in this problem set. One is a function called ``greeting``, which takes any string and adds ``"Hello, "`` in front of it. (You can see examples in the code.) Another one is a function called ``random_digit``, which returns any random integer between 0 and 9 (inclusive). (You can also see examples in the code.)

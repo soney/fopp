@@ -7,7 +7,10 @@ Week 7 Discussion Section
 
 .. activecode:: ee_Opt_Params_01
    :tags: OptionalAndKeywordParameters/OptionalParameters.rst
-   :hidecode:
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: OptionalAndKeywordParameters/OptionalParameters
 
    =====
 
@@ -27,7 +30,10 @@ Week 7 Discussion Section
 
 .. activecode:: ee_Opt_Params_02
    :tags: OptionalAndKeywordParameters/KeywordParameters.rst
-   :hidecode:
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: OptionalAndKeywordParameters/KeywordParameters
 
    def greeting(greeting = "Hello ", name, excl = "!"):
        return greeting + name + excl
@@ -48,7 +54,10 @@ Week 7 Discussion Section
 
 .. activecode:: ee_Opt_Params_03
    :tags: OptionalAndKeywordParameters/OptionalParameters.rst
-   :hidecode:
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: OptionalAndKeywordParameters/OptionalParameters
       
    =====
 
@@ -68,7 +77,10 @@ Week 7 Discussion Section
 
 .. activecode:: ee_opt_params_042
    :tags: OptionalAndKeywordParameters/OptionalParameters.rst
-   :hidecode:
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: OptionalAndKeywordParameters/OptionalParameters
 
    =====
 
@@ -88,7 +100,10 @@ Week 7 Discussion Section
 
 .. activecode:: ee_opt_params_052
    :tags: OptionalAndKeywordParameters/KeywordParameters.rst, OptionalAndKeywordParameters/OptionalParameters.rst
-   :hidecode:
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: OptionalAndKeywordParameters/OptionalParameters
 
    def checkingIfIn(a, direction = True, d = {'apple': 2, 'pear': 1, 'fruit': 19, 'orange': 5, 'banana': 3, 'grapes': 2, 'watermelon': 7}):
        if direction == True:
@@ -134,7 +149,10 @@ Week 7 Discussion Section
 
 .. activecode:: ee_Ch09_01
    :tags: Tuples/Tuples.rst
-   :hidecode:
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Tuples/Tuples
       
    =====
 
@@ -151,7 +169,10 @@ Week 7 Discussion Section
 
 .. activecode:: ee_ch09_02
    :tags: Tuples/Tuples.rst
-   :hidecode:
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Tuples/Tuples
 
    tuples_lst = [('Beijing', 'China', 2008), ('London', 'England', 2012), ('Rio', 'Brazil', 2016, 'Current'), ('Tokyo', 'Japan', 2020, 'Future')]
       
@@ -170,7 +191,10 @@ Week 7 Discussion Section
 
 .. activecode:: ee_ch09_03
    :tags: Tuples/TupleAssignmentwithunpacking.rst
-   :hidecode:
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Tuples/TupleAssignmentwithunpacking
 
    olymp = ('Rio', 'Brazil', 2016)
       
@@ -190,7 +214,10 @@ Week 7 Discussion Section
 9. Define a function called ``info`` with five parameters: name, gender, age, bday_month, and hometown. The function should then return a tuple with all five parameters in that order. 
 
 .. activecode:: tuples_user_info
-   :hidecode:
+   :language: python
+   :autograde: unittest
+   :practice: T
+   :topics: Tuples/TupleAssignmentwithunpacking
 
    =====
 
@@ -206,7 +233,9 @@ Week 7 Discussion Section
 10. Define a **lambda** function called ``alwaysBlue`` that accepts no arguments and returns the string ``'blue'``.
 
 .. activecode:: lambda_alwaysblue
-   :hidecode:
+   :language: python
+   :autograde: unittest
+   :practice: T
 
    =====
 
@@ -223,7 +252,9 @@ Week 7 Discussion Section
 11. Define a **lambda** function called ``plus3`` that accepts one argument (a number) and returns that argumut plus ``3``.
 
 .. activecode:: lambda_plus3
-   :hidecode:
+   :language: python
+   :autograde: unittest
+   :practice: T
 
    =====
 
@@ -241,7 +272,9 @@ Week 7 Discussion Section
 12. Define a **lambda** function called ``prod`` that accepts two arguments (both numbers) and returns the product (multiplication) of those two numbers.
 
 .. activecode:: lambda_prod
-   :hidecode:
+   :language: python
+   :autograde: unittest
+   :practice: T
 
    =====
 
