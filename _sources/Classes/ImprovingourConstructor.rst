@@ -41,7 +41,6 @@ This is a common thing to do in the ``__init__`` method for a class: take in som
 
 **Check Your Understanding**
 
-1. Create a class called ``NumberSet`` that accepts 2 integers as input, and defines two instance variables: ``num1`` and ``num2``, which hold each of the input integers. Then, create an instance of  ``NumberSet`` where its num1 is 6 and its num2 is 10. Save this instance to a variable ``t``. 
 
 .. activecode:: ee_ch13_011
    :tags:Classes/ImprovingourConstructor.rst
@@ -49,8 +48,9 @@ This is a common thing to do in the ``__init__`` method for a class: take in som
    :autograde: unittest
    :practice: T
 
-
-      
+   Create a class called ``NumberSet`` that accepts 2 integers as input, and defines two instance variables: ``num1`` and ``num2``, which hold each of the input integers. Then, create an instance of  ``NumberSet`` where its num1 is 6 and its num2 is 10. Save this instance to a variable ``t``. 
+   ~~~~
+         
    =====
 
    from unittest.gui import TestCaseGui
