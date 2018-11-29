@@ -11,7 +11,7 @@ Final Exam Winter 2015 - Question 14 Part B
    :practice: T
    :topics: Final_Exam_F17/q_14_B
 
-   Define a function f that takes a list of strings and returns a list containing the first letter of every word that contains the letter z. Your function **must use** some combination of map, filter, reduce, zip, and list comprehensions (i.e., without using manual accumulation.)
+   Define a function f that takes a list of strings and returns a list containing the first letter of every word that contains the letter z.
 
    ~~~~
 

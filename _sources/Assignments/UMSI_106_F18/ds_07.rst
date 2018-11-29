@@ -3,7 +3,6 @@
 Week 7 Discussion Section
 -------------------------
 
-1. Write a function called ``str_mult`` that takes in a required string parameter and an optional integer parameter. The default value for the integer parameter should be 3. The function should return the string multiplied by the integer parameter. 
 
 .. activecode:: ee_Opt_Params_01
    :tags: OptionalAndKeywordParameters/OptionalParameters.rst
@@ -11,6 +10,9 @@ Week 7 Discussion Section
    :autograde: unittest
    :practice: T
    :topics: OptionalAndKeywordParameters/OptionalParameters
+
+   1. Write a function called ``str_mult`` that takes in a required string parameter and an optional integer parameter. The default value for the integer parameter should be 3. The function should return the string multiplied by the integer parameter. 
+   ~~~~
 
    =====
 
@@ -26,7 +28,6 @@ Week 7 Discussion Section
    myTests().main()
 
 
-2. The following function, ``greeting``, does not work. Please fix the code so that it runs without error. This only requires one change in the definition of the function.
 
 .. activecode:: ee_Opt_Params_02
    :tags: OptionalAndKeywordParameters/KeywordParameters.rst
@@ -35,6 +36,8 @@ Week 7 Discussion Section
    :practice: T
    :topics: OptionalAndKeywordParameters/KeywordParameters
 
+   2. The following function, ``greeting``, does not work. Please fix the code so that it runs without error. This only requires one change in the definition of the function.
+   ~~~~
    def greeting(greeting = "Hello ", name, excl = "!"):
        return greeting + name + excl
    =====
@@ -50,7 +53,6 @@ Week 7 Discussion Section
    myTests().main()
 
 
-3. Write a function, ``test``, that takes in three parameters: a required integer, an optional boolean whose default value is ``True``, and an optional dictionary (named ``dict1``) whose default value is ``{2:3, 4:5, 6:8}``. If the boolean parameter is ``True``, the function should test to see if the integer is a key in the dictionary. The value of that key should then be returned (if it is **not** a key, return ``None``). If the boolean parameter is ``False``, return the boolean value ``False``.
 
 .. activecode:: ee_Opt_Params_03
    :tags: OptionalAndKeywordParameters/OptionalParameters.rst
@@ -59,6 +61,9 @@ Week 7 Discussion Section
    :practice: T
    :topics: OptionalAndKeywordParameters/OptionalParameters
       
+   3. Write a function, ``test``, that takes in three parameters: a required integer, an optional boolean whose default value is ``True``, and an optional dictionary (named ``dict1``) whose default value is ``{2:3, 4:5, 6:8}``. If the boolean parameter is ``True``, the function should test to see if the integer is a key in the dictionary. The value of that key should then be returned (if it is **not** a key, return ``None``). If the boolean parameter is ``False``, return the boolean value ``False``.
+   ~~~~
+
    =====
 
    from unittest.gui import TestCaseGui
@@ -73,7 +78,6 @@ Week 7 Discussion Section
    myTests().main()
 
 
-4. Write a function called ``together`` that takes three parameters, the first is a required parameter that is a number (integer or float), the second is a required parameter that is a string, and the third is an optional parameter whose default is ``" "``. What is returned is the first parameter, concatenated with the second, using the third.
 
 .. activecode:: ee_opt_params_042
    :tags: OptionalAndKeywordParameters/OptionalParameters.rst
@@ -81,6 +85,9 @@ Week 7 Discussion Section
    :autograde: unittest
    :practice: T
    :topics: OptionalAndKeywordParameters/OptionalParameters
+
+   4. Write a function called ``together`` that takes three parameters, the first is a required parameter that is a number (integer or float), the second is a required parameter that is a string, and the third is an optional parameter whose default is ``" "``. What is returned is the first parameter, concatenated with the second, using the third.
+   ~~~~
 
    =====
 
@@ -96,7 +103,6 @@ Week 7 Discussion Section
 
    myTests().main()   
 
-5. We have provided the function ``checkingIfIn`` such that if the first input parameter is in the third, dictionary, input parameter, then the function returns that value, and otherwise, it returns ``False``. Follow the instructions in the active code window for specific variable assignments. 
 
 .. activecode:: ee_opt_params_052
    :tags: OptionalAndKeywordParameters/KeywordParameters.rst, OptionalAndKeywordParameters/OptionalParameters.rst
@@ -105,6 +111,8 @@ Week 7 Discussion Section
    :practice: T
    :topics: OptionalAndKeywordParameters/OptionalParameters
 
+   5. We have provided the function ``checkingIfIn`` such that if the first input parameter is in the third, dictionary, input parameter, then the function returns that value, and otherwise, it returns ``False``. Follow the instructions in the active code window for specific variable assignments. 
+   ~~~~
    def checkingIfIn(a, direction = True, d = {'apple': 2, 'pear': 1, 'fruit': 19, 'orange': 5, 'banana': 3, 'grapes': 2, 'watermelon': 7}):
        if direction == True:
            if a in d:
@@ -145,7 +153,6 @@ Week 7 Discussion Section
 
 
 
-6. Create a tuple called ``olympics`` with four elements: ``"Beijing"``, ``"London"``, ``"Rio"``, ``"Tokyo"``.
 
 .. activecode:: ee_Ch09_01
    :tags: Tuples/Tuples.rst
@@ -154,6 +161,9 @@ Week 7 Discussion Section
    :practice: T
    :topics: Tuples/Tuples
       
+   6. Create a tuple called ``olympics`` with four elements: ``"Beijing"``, ``"London"``, ``"Rio"``, ``"Tokyo"``.
+   ~~~~
+
    =====
 
    from unittest.gui import TestCaseGui
@@ -165,7 +175,6 @@ Week 7 Discussion Section
 
    myTests().main()
 
-7. The list below, `tuples_lst`, is a list of tuples. Create a list of the second elements of each tuple and assign this list to the variable ``country``. 
 
 .. activecode:: ee_ch09_02
    :tags: Tuples/Tuples.rst
@@ -174,6 +183,8 @@ Week 7 Discussion Section
    :practice: T
    :topics: Tuples/Tuples
 
+   7. The list below, `tuples_lst`, is a list of tuples. Create a list of the second elements of each tuple and assign this list to the variable ``country``. 
+   ~~~~
    tuples_lst = [('Beijing', 'China', 2008), ('London', 'England', 2012), ('Rio', 'Brazil', 2016, 'Current'), ('Tokyo', 'Japan', 2020, 'Future')]
       
    =====
@@ -187,7 +198,6 @@ Week 7 Discussion Section
 
    myTests().main()
 
-8. With only one line of code, assign the variables ``city``, ``country``, and ``year`` to the values of the tuple ``olymp``.
 
 .. activecode:: ee_ch09_03
    :tags: Tuples/TupleAssignmentwithunpacking.rst
@@ -196,6 +206,8 @@ Week 7 Discussion Section
    :practice: T
    :topics: Tuples/TupleAssignmentwithunpacking
 
+   8. With only one line of code, assign the variables ``city``, ``country``, and ``year`` to the values of the tuple ``olymp``.
+   ~~~~
    olymp = ('Rio', 'Brazil', 2016)
       
    =====
@@ -211,13 +223,15 @@ Week 7 Discussion Section
 
    myTests().main()
 
-9. Define a function called ``info`` with five parameters: name, gender, age, bday_month, and hometown. The function should then return a tuple with all five parameters in that order. 
 
 .. activecode:: tuples_user_info
    :language: python
    :autograde: unittest
    :practice: T
    :topics: Tuples/TupleAssignmentwithunpacking
+
+   9. Define a function called ``info`` with five parameters: name, gender, age, bday_month, and hometown. The function should then return a tuple with all five parameters in that order. 
+   ~~~~
 
    =====
 
@@ -230,12 +244,14 @@ Week 7 Discussion Section
 
    myTests().main()
 
-10. Define a **lambda** function called ``alwaysBlue`` that accepts no arguments and returns the string ``'blue'``.
 
 .. activecode:: lambda_alwaysblue
    :language: python
    :autograde: unittest
    :practice: T
+
+   10. Define a **lambda** function called ``alwaysBlue`` that accepts no arguments and returns the string ``'blue'``.
+   ~~~~
 
    =====
 
@@ -249,12 +265,14 @@ Week 7 Discussion Section
 
    myTests().main()
 
-11. Define a **lambda** function called ``plus3`` that accepts one argument (a number) and returns that argumut plus ``3``.
 
 .. activecode:: lambda_plus3
    :language: python
    :autograde: unittest
    :practice: T
+
+   11. Define a **lambda** function called ``plus3`` that accepts one argument (a number) and returns that argumut plus ``3``.
+   ~~~~
 
    =====
 
@@ -269,12 +287,14 @@ Week 7 Discussion Section
 
    myTests().main()
 
-12. Define a **lambda** function called ``prod`` that accepts two arguments (both numbers) and returns the product (multiplication) of those two numbers.
 
 .. activecode:: lambda_prod
    :language: python
    :autograde: unittest
    :practice: T
+
+   12. Define a **lambda** function called ``prod`` that accepts two arguments (both numbers) and returns the product (multiplication) of those two numbers.
+   ~~~~
 
    =====
 
