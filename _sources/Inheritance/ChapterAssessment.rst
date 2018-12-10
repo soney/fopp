@@ -12,6 +12,8 @@ Chapter Assessment
 
 .. activecode:: ee_inheritance_01
    :tags: Inheritance/inheritVarsAndMethods.rst
+   :language: python
+   :autograde: unittest
    :practice: T
    :topics: Inheritance/inheritVarsAndMethods
 
@@ -89,6 +91,8 @@ Chapter Assessment
 
 .. activecode:: ee_inheritance_02
    :tags: Inheritance/inheritVarsAndMethods.rst, Inheritance/OverrideMethods.rst
+   :language: python
+   :autograde: unittest
    :practice: T
    :topics: Inheritance/OverrideMethods
 
@@ -167,6 +171,8 @@ Chapter Assessment
    myTests().main()
 
 .. activecode:: ee_inheritance_05
+   :language: python
+   :autograde: unittest
    :tags: Inheritance/inheritVarsAndMethods.rst
 
    Along with the Pokemon parent class, we have also provided several subclasses. Write another method in the parent class that will be inherited by the subclasses called ``opponent`` that will show which type of pokemon the current type is weak against and strong against. For instance, if the p_type of the subclass is grass, fire will be assigned to the variable ``weak`` and water will be assigned to the variable ``strong``. Grass is weak against fire, but strong against water. Ghost is weak against dark but strong against psychic. Fire is weak against water but strong against grass. Finally, flying is weak against electric but strong against fighting.
