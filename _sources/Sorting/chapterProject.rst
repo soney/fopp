@@ -155,6 +155,12 @@ Project - Sentiment Classifier
 
     myTests().main()
 
+.. mchoice:: upload_ps6_image_to_canvas
+    :correct: a
+    :answer_a: Yes, I've uploaded to Canvas, to the PS6 Upload Your Graph Here assignment
+    :answer_b: No, I haven't uploaded yet.
+
+    Have you uploaded your graph?
 
 
 .. activecode:: ps_05_DYU
