@@ -105,12 +105,13 @@ Project - Wheel of Python
     :available_files: phrases.json wheel.json
 
     We're going to define a few useful methods for you:
-    - ``getNumberBetween(prompt, min, max))`` repeatedly asks the user for a number between ``min`` and ``max`` with the prompt ``prompt``
-    - ``spinWheel()`` simulates spinning the wheel and returns a dictionary with a random prize
-    - ``getRandomCategoryAndPhrase()`` returns a tuple with a random category and phrase for players to guess
-    - ``obscurePhrase(phrase, guessed)`` returns a tuple with a random category and phrase for players to guess
 
-    Read their implementation and make sure they make sense.
+    * ``getNumberBetween(prompt, min, max))`` repeatedly asks the user for a number between ``min`` and ``max`` with the prompt ``prompt``
+    * ``spinWheel()`` simulates spinning the wheel and returns a dictionary with a random prize
+    * ``getRandomCategoryAndPhrase()`` returns a tuple with a random category and phrase for players to guess
+    * ``obscurePhrase(phrase, guessed)`` returns a tuple with a random category and phrase for players to guess
+
+    Take some time to read their implementations below.
 
     ~~~~
     import json
