@@ -2,30 +2,18 @@ import paver
 from paver.easy import *
 import paver.setuputils
 paver.setuputils.install_distutils_tasks()
-import os, sys
+import os, sys, socket
 from runestone.server import get_dburl
 from sphinxcontrib import paverutils
 import pkg_resources
-from runestone import get_master_url
 
 sys.path.append(os.getcwd())
 
-home_dir = os.getcwd()
-
-####################
-project_name ='fopp'
-####################
-
-master_url = get_master_url()
+master_url = ''
 
 master_app = 'runestone'
 serving_dir = "./build/fopp"
-dynamic_pages = True
-if dynamic_pages:
-    dest = "./published"
-else:
-    dest = "../../static"
-
+dest = "../../static"
 
 options(
     sphinx = Bunch(docroot=".",),
@@ -34,18 +22,16 @@ options(
         builddir="./build/fopp",
         sourcedir="_sources",
         outdir="./build/fopp",
-#        warnerror=True,
         confdir=".",
         project_name = "fopp",
         template_args={'course_id': 'fopp',
                        'login_required':'false',
-                       'course_title': project_name,
                        'appname':master_app,
-                       'dynamic_pages': True,
                        'loglevel': 10,
                        'course_url':master_url,
                        'use_services': 'true',
                        'python3': 'true',
+                       'dburl': 'postgresql://user:password@localhost/runestone',
                        'default_ac_lang': 'python',
                        'basecourse': 'fopp',
                        'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
@@ -53,7 +39,7 @@ options(
                        'proxy_uri_files': '/jobe/index.php/restapi/files/',
                        'downloads_enabled': 'false',
                        'enable_chatcodes': 'false',
-                       'allow_pairs': 'false'
+                       'lockdown': "True"
                         }
     )
 )
