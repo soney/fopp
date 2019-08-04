@@ -56,7 +56,8 @@ options(
                        'proxy_uri_files': '/jobe/index.php/restapi/files/',
                        'downloads_enabled': 'false',
                        'enable_chatcodes': 'false',
-                       'allow_pairs': 'false'
+                       'allow_pairs': 'false',
+                       'lockdown': 'True'
                         }
     )
 )
