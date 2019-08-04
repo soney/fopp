@@ -50,7 +50,7 @@ Project - Sentiment Classifier
     :language: python
     :practice: T
 
-    Next, copy in your strip_punctuation function and define a function called ``get_pos`` which takes one parameter, a string which represents a one or more sentences, and calculates how many words in the string are considered positive words. Use the list, ``positive_words`` to determine what words will count as positive. The function should return a positive integer - how many occurances there are of positive words in the text.
+    Next, copy in your strip_punctuation function and define a function called ``get_pos`` which takes one parameter, a string which represents one or more sentences, and calculates how many words in the string are considered positive words. Use the list, ``positive_words`` to determine what words will count as positive. The function should return a positive integer - how many occurrences there are of positive words in the text. Note that all of the words in ``positive_words`` are lower cased, so you'll need to convert all the words in the input string to lower case as well.
 
     ~~~~
 
@@ -69,10 +69,11 @@ Project - Sentiment Classifier
     class myTests(TestCaseGui):
 
         def test_problem2(self):
-            self.assertEqual(get_pos("what a truly wonderful day it is today! #incredible"), 2, "Testing that the correct output is returned for get_pos.")
-            self.assertEqual(get_pos("what a truly wonderful day it is today!"), 1, "Testing that the correct output is returned for get_pos.")
-            self.assertEqual(get_pos("the weather is what it is."), 0, "Testing that the correct output is returned for get_pos.")
-            self.assertEqual(get_pos("The weather truely is abnormal - it's october and already snowing!"), 0, "Testing that the correct output is returned for get_pos.")
+            self.assertEqual(get_pos("what a truly wonderful day it is today! #incredible"), 2, 'Testing "what a truly wonderful day it is today! #incredible"')
+            self.assertEqual(get_pos("what a truly Wonderful day it is today! #incredible"), 2, "what a truly Wonderful day it is today! #incredible")
+            self.assertEqual(get_pos("what a truly wonderful day it is today!"), 1, "what a truly wonderful day it is today!")
+            self.assertEqual(get_pos("the weather is what it is."), 0, "the weather is what it is.")
+            self.assertEqual(get_pos("The weather truely is abnormal - it's october and already snowing!"), 0, "The weather truely is abnormal - it's october and already snowing!")
 
 
     myTests().main()
@@ -83,7 +84,7 @@ Project - Sentiment Classifier
     :language: python
     :practice: T
 
-    Next, copy in your strip_punctuation function and define a function called ``get_neg`` which takes one parameter, a string which represents a one or more sentences, and calculates how many words in the string are considered negative words. Use the list, ``negative_words`` to determine what words will count as negative. The function should return a positive integer - how many occurances there are of negative words in the text.
+    Next, copy in your strip_punctuation function and define a function called ``get_neg`` which takes one parameter, a string which represents one or more sentences, and calculates how many words in the string are considered negative words. Use the list, ``negative_words`` to determine what words will count as negative. The function should return a positive integer - how many occurrences there are of negative words in the text. Note that all of the words in ``negative_words`` are lower cased, so you'll need to convert all the words in the input string to lower case as well.
 
     ~~~~
 
@@ -102,10 +103,10 @@ Project - Sentiment Classifier
     class myTests(TestCaseGui):
 
       def test_problem3(self):
-        self.assertEqual(get_neg("what a truly wonderful day it is today! #incredible"), 0, "Testing that the correct output is returned for get_neg.")
-        self.assertEqual(get_neg("The weather truely is abnormal - it's october and already snowing!"), 1, "Testing that the correct output is returned for get_neg.")
-        self.assertEqual(get_neg("their departure was rather abrupt. However, it was amusing how aloof they had been."), 2, "Testing that the correct output is returned for get_neg.")
-        self.assertEqual(get_neg("the weather is what it is."), 0, "Testing that the correct output is returned for get_neg.")
+        self.assertEqual(get_neg("what a truly wonderful day it is today! #incredible"), 0, "what a truly wonderful day it is today! #incredible")
+        self.assertEqual(get_neg("The weather truely is abnormal - it's october and already snowing!"), 1, "The weather truely is abnormal - it's october and already snowing!")
+        self.assertEqual(get_neg("their departure was rather abrupt. However, it was amusing how aloof they had been."), 2, "their departure was rather abrupt. However, it was amusing how aloof they had been.")
+        self.assertEqual(get_neg("the weather is what it is."), 0, "the weather is what it is.")
 
 
     myTests().main()
