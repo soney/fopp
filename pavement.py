@@ -19,6 +19,7 @@ project_name ='fopp'
 master_url = None
 if not master_url:
     master_url = get_master_url()
+master_url = ''
 
 master_app = 'runestone'
 serving_dir = "./build/fopp"
