@@ -15,4 +15,3 @@ Sorting
    Exercises.rst
    ChapterAssessment.rst
    chapterProject.rst
-   
