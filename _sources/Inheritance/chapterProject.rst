@@ -102,7 +102,6 @@ Project - Wheel of Python
     :autograde: unittest
     :language: python
     :nocodelens:
-    :available_files: phrases.json wheel.json
 
     We're going to define a few useful methods for you:
     - ``getNumberBetween(prompt, min, max))`` repeatedly asks the user for a number between ``min`` and ``max`` with the prompt ``prompt``
@@ -224,7 +223,6 @@ Project - Wheel of Python
     :autograde: unittest
     :language: python
     :nocodelens:
-    :available_files: phrases.json wheel.json
 
     **Part A: WOFPlayer**
 
@@ -445,7 +443,6 @@ Project - Wheel of Python
     :autograde: unittest
     :language: python
     :nocodelens:
-    :available_files: phrases.json phrases.json
 
     **Putting it together: Wheel of Python**
 
