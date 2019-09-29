@@ -77,6 +77,7 @@ Chapter Assessment - List Methods
 .. activecode:: assess_ac4_1_1_4
     :language: python
     :practice: T
+    :autograde: unittest
     :topics: TransformingSequences/MutatingMethods
 
     Write code to add 'horseback riding' to the third position (i.e., right before volleyball) in the list ``sports``.
@@ -96,8 +97,23 @@ Chapter Assessment - List Methods
 
     myTests().main()
 
+
+.. activecode:: assess_ac4_1_1_4_assert
+    :language: python
+    :topics: TransformingSequences/MutatingMethods
+
+    Write code to add 'horseback riding' to the third position (i.e., right before volleyball) in the list ``sports``.
+
+    Then, write one or more ``assert`` statements that test whether you have written the code correctly. This question will be graded manually.
+
+    ~~~~
+    sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
+
+
+
 .. activecode:: assess_ac4_1_1_5
     :language: python
+    :autograde: unittest
     :practice: T
     :topics: TransformingSequences/MutatingMethods
 
@@ -118,8 +134,23 @@ Chapter Assessment - List Methods
 
     myTests().main()
 
+
+.. activecode:: assess_ac4_1_1_5_assert
+    :language: python
+    :topics: TransformingSequences/MutatingMethods
+
+    Write code to take 'London' out of the list ``trav_dest``.
+
+    Then, write one or more ``assert`` statements that test whether you have written the code correctly. This question will be graded manually.
+
+    ~~~~
+    trav_dest = ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'London', 'Melbourne']
+
+
+
 .. activecode:: assess_ac4_1_1_6
     :language: python
+    :autograde: unittest
     :practice: T
     :topics: TransformingSequences/MutatingMethods
 
@@ -140,6 +171,18 @@ Chapter Assessment - List Methods
         self.assertIn('.', self.getEditorText(), "Testing that a method invocation was used in your code.")
 
     myTests().main()
+
+
+.. activecode:: assess_ac4_1_1_6_assert
+    :language: python
+    :topics: TransformingSequences/MutatingMethods
+
+    Write code to add 'Guadalajara' to the end of the list ``trav_dest`` using a list method.
+
+    Then, write one or more ``assert`` statements that test whether you have written the code correctly. This question will be graded manually.
+    ~~~~
+    trav_dest = ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'Melbourne']
+
 
 
 Chapter Assessment - Aliases and References
@@ -641,6 +684,17 @@ Chapter Assessment - Accumulator Pattern
 
    myTests().main()
 
+.. activecode:: access_ac_5_2_1_2_assert
+   :language: python
+   :topics: TransformingSequences/TheAccumulatorPatternwithLists
+
+   For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
+
+    Then, write one or more ``assert`` statements that test whether you have written the code correctly. This question will be graded manually.
+   ~~~~
+   wrds = ["end", "work", "play", "start", "walk", "look", "open", "rain", "learn", "clean"]
+
+
 .. activecode:: assess_ps_02_06
     :language: python
     :autograde: unittest
@@ -664,6 +718,18 @@ Chapter Assessment - Accumulator Pattern
            self.assertIn('for', self.getEditorText(), "Testing that you are using a for loop in your code.")
 
     myTests().main()
+
+
+.. activecode:: assess_ps_02_06_assert
+    :language: python
+    :topics: TransformingSequences/TheAccumulatorPatternwithLists
+
+    Write code to create a **list of word lengths** for the words in ``original_str`` using the accumulation pattern and assign the answer to a variable ``num_words_list``. (You should use the ``len`` function).
+
+    Then, write one or more ``assert`` statements that test whether you have written the code correctly. This question will be graded manually.
+
+    ~~~~
+    original_str = "The quick brown rhino jumped over the extremely lazy fox"
 
 
 .. activecode:: assess_pc_02_10
@@ -737,6 +803,18 @@ Chapter Assessment - Problem Solving
 
    myTests().main()
 
+.. activecode:: asign_c01_02_assert
+   :language: python
+   :topics: TransformingSequences/TheAccumulatorPatternwithStrings
+
+   Write code that uses the string stored in ``org`` and creates an acronym which is assigned to the variable ``acro``. Only the first letter of each word should be used, each letter in the acronym should be a capital letter, and there should be nothing to separate the letters of the acronym. Words that should not be included in the acronym are stored in the list ``stopwords``. For example, if ``org`` was assigned the string "hello to world" then the resulting acronym should be "HW".
+
+    Then, write one or more ``assert`` statements that test whether you have written the code correctly. This question will be graded manually.
+   ~~~~
+   stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and', "The"]
+   org = "The organization for health, safety, and education"
+
+
 .. activecode:: asign_c01_03
    :language: python
    :autograde: unittest
@@ -785,6 +863,18 @@ Chapter Assessment - Problem Solving
          self.assertIsNot(p_phrase, r_phrase, "checking that r_phrase and p_phrase are not the same object.")
 
    myTests().main()
+
+.. activecode:: asign_c01_04_assert
+   :language: python
+   :topics: TransformingSequences/TheAccumulatorPatternwithStrings
+
+   A palindrome is a phrase that, if reversed, would read the exact same. Write code that checks if ``p_phrase`` is a palindrome by reversing it and then checking if the reversed version is equal to the original.
+
+   Then, write one or more ``assert`` statements that test whether you have written the code correctly. This question will be graded manually.
+   ~~~~
+   p_phrase = "was it a car or a cat I saw"
+
+
 
 .. activecode:: asign_c01_05
    :language: python
