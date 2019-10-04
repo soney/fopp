@@ -105,6 +105,19 @@ Assessment - Dictionaries
    myTests().main()
 
 
+.. activecode:: ac10_9_4_assert
+   :language: python
+
+   The dictionary ``golds`` contains information about how many gold medals each country won in the 2016 Olympics. But today, Spain won 2 more gold medals. Update ``golds`` to reflect this information.
+
+   Then, write one or more ``assert`` statements that test whether you have written the code correctly. This question will be graded manually.
+
+   ~~~~
+
+   golds = {"Italy": 12, "USA": 33, "Brazil": 15, "China": 27, "Spain": 19, "Canada": 22, "Argentina": 8, "England": 29}
+
+
+
 .. activecode:: ac10_9_5
    :language: python
    :autograde: unittest
@@ -149,6 +162,18 @@ Assessment - Dictionaries
          self.assertEqual(belarus, 4, "Testing that belarus is assigned the correct value.")
 
    myTests().main()
+
+.. activecode:: ac10_9_6_assert
+   :language: python
+   :topics: Dictionaries/intro-Dictionaries
+
+   Provided is the dictionary, ``medal_count``, which lists countries and their respective medal count at the halfway point in the 2016 Rio Olympics. Using dictionary mechanics, assign the medal count value for ``"Belarus"`` to the variable ``belarus``. Do not hardcode this.
+
+   Then, write one or more ``assert`` statements that test whether you have written the code correctly. This question will be graded manually.
+
+   ~~~~
+
+   medal_count = {'United States': 70, 'Great Britain':38, 'China':45, 'Russia':30, 'Germany':17, 'Italy':22, 'France': 22, 'Japan':26, 'Australia':22, 'South Korea':14, 'Hungary':12, 'Netherlands':10, 'Spain':5, 'New Zealand':8, 'Canada':13, 'Kazakhstan':8, 'Colombia':4, 'Switzerland':5, 'Belgium':4, 'Thailand':4, 'Croatia':3, 'Iran':3, 'Jamaica':3, 'South Africa':7, 'Sweden':6, 'Denmark':7, 'North Korea':6, 'Kenya':4, 'Brazil':7, 'Belarus':4, 'Cuba':5, 'Poland':4, 'Romania':4, 'Slovenia':3, 'Argentina':2, 'Bahrain':2, 'Slovakia':2, 'Vietnam':2, 'Czech Republic':6, 'Uzbekistan':5}
 
 
 .. activecode:: ac10_9_7
@@ -264,8 +289,10 @@ Assessment - Dictionary Accumulation
 .. activecode:: ac10_9_12
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
-   Create a dictionary, ``freq_words``, that displays each word in string ``str1`` as the key and its frequency as the value.
+   Create a dictionary, ``freq_words``, that contains each word in string ``str1`` as the key and its frequency as the value.
    ~~~~
    str1 = "I wish I wish with all my heart to fly with dragons in a land apart"
 
@@ -279,6 +306,17 @@ Assessment - Dictionary Accumulation
          self.assertEqual(sorted(freq_words.items()), sorted([('a', 1), ('I', 2), ('wish', 2), ('with', 2), ('all', 1), ('my', 1), ('heart', 1), ('to', 1), ('fly', 1), ('dragons', 1), ('in', 1), ('land', 1), ('apart', 1)]), "Testing that freq_words was created correctly.")
 
    myTests().main()
+
+.. activecode:: ac10_9_12_assert
+   :language: python
+
+   Create a dictionary, ``freq_words``, that contains each word in string ``str1`` as the key and its frequency as the value.
+
+   Then, write one or more ``assert`` statements that test whether you have written the code correctly. This question will be graded manually.
+
+   ~~~~
+   str1 = "I wish I wish with all my heart to fly with dragons in a land apart"
+
 
 
 .. activecode:: ac10_9_13
@@ -330,8 +368,10 @@ Assessment - Dictionary Accumulation
 .. activecode:: ac10_9_15
    :language: python
    :autograde: unittest
+   :practice: T
+   :topics: Dictionaries/AccumulatingtheBestKey
 
-   Do the same as above but now find the least frequent letter. Create the dictionary ``characters`` that shows each character from string ``sally`` and its frequency. Then, find the least frequent letter in the string and assign the letter to the variable ``worst_char``.
+   Find the least frequent letter. Create the dictionary ``characters`` that shows each character from string ``sally`` and its frequency. Then, find the least frequent letter in the string and assign the letter to the variable ``worst_char``.
    ~~~~
    sally = "sally sells sea shells by the sea shore and by the road"
 
@@ -348,6 +388,19 @@ Assessment - Dictionary Accumulation
          self.assertEqual(worst_char, "n", "Testing that worst_char is assigned to correct value.")
 
    myTests().main()
+
+.. activecode:: ac10_9_15_assert
+   :language: python
+   :topics: Dictionaries/AccumulatingtheBestKey
+
+   Find the least frequent letter. Create the dictionary ``characters`` that shows each character from string ``sally`` and its frequency. Then, find the least frequent letter in the string and assign the letter to the variable ``worst_char``.
+
+   Then, write one or more ``assert`` statements that test whether you have written the code correctly. This question will be graded manually.
+
+   ~~~~
+   sally = "sally sells sea shells by the sea shore and by the road"
+
+
 
 .. activecode:: ac10_9_16
    :language: python
@@ -402,3 +455,4 @@ Assessment - Dictionary Accumulation
 
 
    myTests().main()
+
