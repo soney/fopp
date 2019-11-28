@@ -81,8 +81,12 @@ Table of Contents
    Classes/toctree.rst
    BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
-   AdvancedAccumulation/toctree.rst 
-   
+   AdvancedAccumulation/toctree.rst
+   Final_Exam_W15/toctree.rst
+   Final_Exam_F16/toctree.rst
+   Final_Exam_F15/toctree.rst
+   Final_Exam_F17/toctree.rst
+
 
 Appendices
 ::::::::::
