@@ -77,7 +77,6 @@ Table of Contents
    Inheritance/toctree.rst
    AdvancedAccumulation/toctree.rst
    InternetAPIs/toctree.rst
-   
 
 Appendices
 ::::::::::
