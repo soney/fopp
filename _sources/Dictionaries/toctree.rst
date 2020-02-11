@@ -16,5 +16,6 @@ Dictionaries
    WPChoosingDictionaries.rst
    Glossary.rst
    Exercises.rst
+   ExtraExercises.rst
    ChapterAssessment.rst
    
