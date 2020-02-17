@@ -19,5 +19,6 @@ Files
    WPTipsHandlingFiles.rst
    Glossary.rst
    Exercises.rst
+   ExtraExercises.rst
    ChapterAssessment.rst
    
