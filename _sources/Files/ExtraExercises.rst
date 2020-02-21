@@ -102,6 +102,8 @@ Extra Exercises
     - ``getLowestScorer(assignment)``: Should return the **name** of the student with the **lowest** score on the specified assignment (for example, ``assignment`` might be ``"problem set 1"``).
     - ``getMeanScore(assignment)``: Should return the **average** score across all students on the specified assignment (for example, ``assignment`` might be ``"problem set 1"``).
 
+    **DO NOT hardcode the assignment column names**. Your code should work if new rows or columns are added. It is OK to assume that students' names will be in the first column.
+
     ~~~~
 
     =====
@@ -154,8 +156,6 @@ Extra Exercises
     :autograde: unittest
 
     Define a function ``addOneMutate(L)`` that adds ``1`` to every item in its argument (``L``) by **mutating** its argument. ``addOneMutate(L)`` should return ``None``.
-
-    **DO NOT hardcode the assignment column names**. Your code should work if new rows or columns are added. It is OK to assume that students' names will be in the first column.
 
     ~~~~
 
