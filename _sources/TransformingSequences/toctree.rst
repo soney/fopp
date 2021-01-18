@@ -14,6 +14,7 @@ Transforming Sequences
    MutatingMethods.rst
    AppendversusConcatenate.rst
    NonmutatingMethodsonStrings.rst
+   FStrings.rst
    TheAccumulatorPatternwithLists.rst
    TheAccumulatorPatternwithStrings.rst
    WPAccumulatorPatternStrategies.rst

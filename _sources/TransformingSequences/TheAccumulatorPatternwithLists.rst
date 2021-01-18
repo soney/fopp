@@ -16,7 +16,7 @@ The Accumulator Pattern with Lists
 We can accumulate values into a list rather than accumulating a single numeric value. Consider, for 
 example, the following program which transforms a list into a new list by squaring each of the values.
 
-.. activecode:: ac8_9_1
+.. activecode:: ac8_10_1
 
    nums = [3, 5, 8]
    accum = []
@@ -85,7 +85,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
         new_list.append(lst[i]+5)
      print(new_list)
 
-.. activecode:: ac8_9_2
+.. activecode:: ac8_10_2
    :language: python
    :autograde: unittest
    :practice: T
@@ -105,7 +105,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
 
    myTests().main()
 
-.. activecode:: ac8_9_3
+.. activecode:: ac8_10_3
    :language: python
    :autograde: unittest
    :practice: T
@@ -125,7 +125,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
 
    myTests().main()
 
-.. activecode:: ac8_9_4
+.. activecode:: ac8_10_4
    :language: python
    :autograde: unittest
    :practice: T
@@ -145,7 +145,7 @@ Note how this differs from mutating the original list, as you saw in a previous 
 
    myTests().main()
 
-.. activecode:: ac8_9_5
+.. activecode:: ac8_10_5
    :language: python
    :autograde: unittest
    :practice: T
