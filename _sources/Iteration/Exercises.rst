@@ -26,7 +26,7 @@ Exercises
         Mack, Nack, Ouack, Pack, and Quack.  This loop tries to output these names in order.
 
         Of course, that's not quite right because Ouack and Quack are misspelled.
-        Can you fix it?
+        Can you fix it by updating the value (and type) of ``prefixes``?
         ~~~~
 
         prefixes = "JKLMNOPQ"
